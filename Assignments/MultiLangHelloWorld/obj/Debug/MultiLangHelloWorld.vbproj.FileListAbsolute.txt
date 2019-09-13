@@ -1,0 +1,12 @@
+C:\Users\demps\source\repos\MultiLangHelloWorld\bin\Debug\MultiLangHelloWorld.exe.config
+C:\Users\demps\source\repos\MultiLangHelloWorld\bin\Debug\MultiLangHelloWorld.exe
+C:\Users\demps\source\repos\MultiLangHelloWorld\bin\Debug\MultiLangHelloWorld.pdb
+C:\Users\demps\source\repos\MultiLangHelloWorld\bin\Debug\MultiLangHelloWorld.xml
+C:\Users\demps\source\repos\MultiLangHelloWorld\obj\Debug\MultiLangHelloWorld.vbprojAssemblyReference.cache
+C:\Users\demps\source\repos\MultiLangHelloWorld\obj\Debug\MultiLangHelloWorld.MultiLangHelloWorldForm.resources
+C:\Users\demps\source\repos\MultiLangHelloWorld\obj\Debug\MultiLangHelloWorld.Resources.resources
+C:\Users\demps\source\repos\MultiLangHelloWorld\obj\Debug\MultiLangHelloWorld.vbproj.GenerateResource.cache
+C:\Users\demps\source\repos\MultiLangHelloWorld\obj\Debug\MultiLangHelloWorld.vbproj.CoreCompileInputs.cache
+C:\Users\demps\source\repos\MultiLangHelloWorld\obj\Debug\MultiLangHelloWorld.exe
+C:\Users\demps\source\repos\MultiLangHelloWorld\obj\Debug\MultiLangHelloWorld.xml
+C:\Users\demps\source\repos\MultiLangHelloWorld\obj\Debug\MultiLangHelloWorld.pdb
