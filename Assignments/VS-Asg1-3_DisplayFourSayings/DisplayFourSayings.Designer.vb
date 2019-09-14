@@ -39,7 +39,7 @@ Partial Class DisplayFourSayings
         Me.ExitButton.Location = New System.Drawing.Point(757, 380)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(98, 58)
-        Me.ExitButton.TabIndex = 0
+        Me.ExitButton.TabIndex = 5
         Me.ExitButton.Text = "E&xit"
         Me.ExitButton.UseVisualStyleBackColor = True
         '
@@ -78,7 +78,7 @@ Partial Class DisplayFourSayings
         Me.Saying1Button.Location = New System.Drawing.Point(12, 265)
         Me.Saying1Button.Name = "Saying1Button"
         Me.Saying1Button.Size = New System.Drawing.Size(191, 36)
-        Me.Saying1Button.TabIndex = 4
+        Me.Saying1Button.TabIndex = 0
         Me.Saying1Button.Text = "Display Saying #&1"
         Me.ToolTip1.SetToolTip(Me.Saying1Button, "Display First Saying")
         Me.Saying1Button.UseVisualStyleBackColor = True
@@ -108,7 +108,7 @@ Partial Class DisplayFourSayings
         Me.DefaultLabelButton.Location = New System.Drawing.Point(757, 307)
         Me.DefaultLabelButton.Name = "DefaultLabelButton"
         Me.DefaultLabelButton.Size = New System.Drawing.Size(98, 58)
-        Me.DefaultLabelButton.TabIndex = 7
+        Me.DefaultLabelButton.TabIndex = 4
         Me.DefaultLabelButton.Text = "&Default Label"
         Me.DefaultLabelButton.UseVisualStyleBackColor = True
         '
