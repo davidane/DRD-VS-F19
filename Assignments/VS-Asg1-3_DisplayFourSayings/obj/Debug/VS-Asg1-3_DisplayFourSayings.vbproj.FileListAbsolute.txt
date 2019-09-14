@@ -3,10 +3,10 @@ C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayi
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayings\bin\Debug\VS-Asg1-3_DisplayFourSayings.pdb
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayings\bin\Debug\VS-Asg1-3_DisplayFourSayings.xml
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayings\obj\Debug\VS-Asg1-3_DisplayFourSayings.vbprojAssemblyReference.cache
-C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayings\obj\Debug\VS_Asg1_3_DisplayFourSayings.Form1.resources
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayings\obj\Debug\VS_Asg1_3_DisplayFourSayings.Resources.resources
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayings\obj\Debug\VS-Asg1-3_DisplayFourSayings.vbproj.GenerateResource.cache
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayings\obj\Debug\VS-Asg1-3_DisplayFourSayings.vbproj.CoreCompileInputs.cache
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayings\obj\Debug\VS-Asg1-3_DisplayFourSayings.exe
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayings\obj\Debug\VS-Asg1-3_DisplayFourSayings.xml
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayings\obj\Debug\VS-Asg1-3_DisplayFourSayings.pdb
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\VS-Asg1-3_DisplayFourSayings\obj\Debug\VS_Asg1_3_DisplayFourSayings.DisplayFourSayings.resources

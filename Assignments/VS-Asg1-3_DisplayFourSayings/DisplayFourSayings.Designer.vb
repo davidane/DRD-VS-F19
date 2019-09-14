@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class DisplayFourSayings
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,17 @@ Partial Class DisplayFourSayings
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.ExitButton = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Saying2Button = New System.Windows.Forms.Button()
+        Me.Saying3Button = New System.Windows.Forms.Button()
+        Me.Saying4Button = New System.Windows.Forms.Button()
+        Me.Saying1Button = New System.Windows.Forms.Button()
         Me.OwnerNameLabel = New System.Windows.Forms.Label()
+        Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.DisplaySayingLabel = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'ExitButton
@@ -39,41 +42,41 @@ Partial Class DisplayFourSayings
         Me.ExitButton.Text = "E&xit"
         Me.ExitButton.UseVisualStyleBackColor = True
         '
-        'Button2
+        'Saying2Button
         '
-        Me.Button2.Location = New System.Drawing.Point(12, 307)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(191, 36)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Saying2Button.Location = New System.Drawing.Point(12, 307)
+        Me.Saying2Button.Name = "Saying2Button"
+        Me.Saying2Button.Size = New System.Drawing.Size(191, 36)
+        Me.Saying2Button.TabIndex = 1
+        Me.Saying2Button.Text = "Display Saying #&2"
+        Me.Saying2Button.UseVisualStyleBackColor = True
         '
-        'Button3
+        'Saying3Button
         '
-        Me.Button3.Location = New System.Drawing.Point(12, 349)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(191, 36)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Saying3Button.Location = New System.Drawing.Point(12, 349)
+        Me.Saying3Button.Name = "Saying3Button"
+        Me.Saying3Button.Size = New System.Drawing.Size(191, 36)
+        Me.Saying3Button.TabIndex = 2
+        Me.Saying3Button.Text = "Display Saying #&3"
+        Me.Saying3Button.UseVisualStyleBackColor = True
         '
-        'Button4
+        'Saying4Button
         '
-        Me.Button4.Location = New System.Drawing.Point(12, 391)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(191, 36)
-        Me.Button4.TabIndex = 3
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Saying4Button.Location = New System.Drawing.Point(12, 391)
+        Me.Saying4Button.Name = "Saying4Button"
+        Me.Saying4Button.Size = New System.Drawing.Size(191, 36)
+        Me.Saying4Button.TabIndex = 3
+        Me.Saying4Button.Text = "Display Saying #&4"
+        Me.Saying4Button.UseVisualStyleBackColor = True
         '
-        'Button1
+        'Saying1Button
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 265)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(191, 36)
-        Me.Button1.TabIndex = 4
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Saying1Button.Location = New System.Drawing.Point(12, 265)
+        Me.Saying1Button.Name = "Saying1Button"
+        Me.Saying1Button.Size = New System.Drawing.Size(191, 36)
+        Me.Saying1Button.TabIndex = 4
+        Me.Saying1Button.Text = "Display Saying #&1"
+        Me.Saying1Button.UseVisualStyleBackColor = True
         '
         'OwnerNameLabel
         '
@@ -84,16 +87,27 @@ Partial Class DisplayFourSayings
         Me.OwnerNameLabel.TabIndex = 5
         Me.OwnerNameLabel.Text = "Created by: Dane Davids"
         '
+        'DisplaySayingLabel
+        '
+        Me.DisplaySayingLabel.AutoSize = True
+        Me.DisplaySayingLabel.Font = New System.Drawing.Font("Microsoft Tai Le", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.DisplaySayingLabel.Location = New System.Drawing.Point(7, 48)
+        Me.DisplaySayingLabel.Name = "DisplaySayingLabel"
+        Me.DisplaySayingLabel.Size = New System.Drawing.Size(159, 29)
+        Me.DisplaySayingLabel.TabIndex = 6
+        Me.DisplaySayingLabel.Text = "Words go here"
+        '
         'DisplayFourSayings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.DisplaySayingLabel)
         Me.Controls.Add(Me.OwnerNameLabel)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Saying1Button)
+        Me.Controls.Add(Me.Saying4Button)
+        Me.Controls.Add(Me.Saying3Button)
+        Me.Controls.Add(Me.Saying2Button)
         Me.Controls.Add(Me.ExitButton)
         Me.Name = "DisplayFourSayings"
         Me.Text = "Form1"
@@ -103,9 +117,11 @@ Partial Class DisplayFourSayings
     End Sub
 
     Friend WithEvents ExitButton As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents Saying2Button As Button
+    Friend WithEvents Saying3Button As Button
+    Friend WithEvents Saying4Button As Button
+    Friend WithEvents Saying1Button As Button
     Friend WithEvents OwnerNameLabel As Label
+    Friend WithEvents ToolTip1 As ToolTip
+    Friend WithEvents DisplaySayingLabel As Label
 End Class
