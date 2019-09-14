@@ -31,11 +31,12 @@ Partial Class DisplayFourSayings
         Me.OwnerNameLabel = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.DisplaySayingLabel = New System.Windows.Forms.Label()
+        Me.DefaultLabelButton = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'ExitButton
         '
-        Me.ExitButton.Location = New System.Drawing.Point(690, 380)
+        Me.ExitButton.Location = New System.Drawing.Point(757, 380)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(98, 58)
         Me.ExitButton.TabIndex = 0
@@ -49,6 +50,7 @@ Partial Class DisplayFourSayings
         Me.Saying2Button.Size = New System.Drawing.Size(191, 36)
         Me.Saying2Button.TabIndex = 1
         Me.Saying2Button.Text = "Display Saying #&2"
+        Me.ToolTip1.SetToolTip(Me.Saying2Button, "Display Second Saying")
         Me.Saying2Button.UseVisualStyleBackColor = True
         '
         'Saying3Button
@@ -58,6 +60,7 @@ Partial Class DisplayFourSayings
         Me.Saying3Button.Size = New System.Drawing.Size(191, 36)
         Me.Saying3Button.TabIndex = 2
         Me.Saying3Button.Text = "Display Saying #&3"
+        Me.ToolTip1.SetToolTip(Me.Saying3Button, "Display Third Saying")
         Me.Saying3Button.UseVisualStyleBackColor = True
         '
         'Saying4Button
@@ -67,6 +70,7 @@ Partial Class DisplayFourSayings
         Me.Saying4Button.Size = New System.Drawing.Size(191, 36)
         Me.Saying4Button.TabIndex = 3
         Me.Saying4Button.Text = "Display Saying #&4"
+        Me.ToolTip1.SetToolTip(Me.Saying4Button, "Display Fourth Saying")
         Me.Saying4Button.UseVisualStyleBackColor = True
         '
         'Saying1Button
@@ -76,6 +80,7 @@ Partial Class DisplayFourSayings
         Me.Saying1Button.Size = New System.Drawing.Size(191, 36)
         Me.Saying1Button.TabIndex = 4
         Me.Saying1Button.Text = "Display Saying #&1"
+        Me.ToolTip1.SetToolTip(Me.Saying1Button, "Display First Saying")
         Me.Saying1Button.UseVisualStyleBackColor = True
         '
         'OwnerNameLabel
@@ -93,15 +98,26 @@ Partial Class DisplayFourSayings
         Me.DisplaySayingLabel.Font = New System.Drawing.Font("Microsoft Tai Le", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DisplaySayingLabel.Location = New System.Drawing.Point(7, 48)
         Me.DisplaySayingLabel.Name = "DisplaySayingLabel"
-        Me.DisplaySayingLabel.Size = New System.Drawing.Size(159, 29)
+        Me.DisplaySayingLabel.Size = New System.Drawing.Size(331, 29)
         Me.DisplaySayingLabel.TabIndex = 6
-        Me.DisplaySayingLabel.Text = "Words go here"
+        Me.DisplaySayingLabel.Text = "Choose a saying to be displayed!"
+        Me.ToolTip1.SetToolTip(Me.DisplaySayingLabel, "Words go here")
+        '
+        'DefaultLabelButton
+        '
+        Me.DefaultLabelButton.Location = New System.Drawing.Point(757, 307)
+        Me.DefaultLabelButton.Name = "DefaultLabelButton"
+        Me.DefaultLabelButton.Size = New System.Drawing.Size(98, 58)
+        Me.DefaultLabelButton.TabIndex = 7
+        Me.DefaultLabelButton.Text = "&Default Label"
+        Me.DefaultLabelButton.UseVisualStyleBackColor = True
         '
         'DisplayFourSayings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(867, 450)
+        Me.Controls.Add(Me.DefaultLabelButton)
         Me.Controls.Add(Me.DisplaySayingLabel)
         Me.Controls.Add(Me.OwnerNameLabel)
         Me.Controls.Add(Me.Saying1Button)
@@ -124,4 +140,5 @@ Partial Class DisplayFourSayings
     Friend WithEvents OwnerNameLabel As Label
     Friend WithEvents ToolTip1 As ToolTip
     Friend WithEvents DisplaySayingLabel As Label
+    Friend WithEvents DefaultLabelButton As Button
 End Class
