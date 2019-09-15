@@ -1,0 +1,5 @@
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\WindowsApp1\obj\Debug\WindowsApp1.vbprojAssemblyReference.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\WindowsApp1\obj\Debug\WindowsApp1.vbproj.CoreCompileInputs.cache

@@ -1,0 +1,12 @@
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\bin\Debug\Experimenting with variables equal to each other within a text.exe.config
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\bin\Debug\Experimenting with variables equal to each other within a text.exe
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\bin\Debug\Experimenting with variables equal to each other within a text.pdb
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\bin\Debug\Experimenting with variables equal to each other within a text.xml
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\obj\Debug\Experimenting with variables equal to each other within a text.vbprojAssemblyReference.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\obj\Debug\Experimenting_with_variables_equal_to_each_other_within_a_text.Form1.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\obj\Debug\Experimenting_with_variables_equal_to_each_other_within_a_text.Resources.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\obj\Debug\Experimenting with variables equal to each other within a text.vbproj.GenerateResource.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\obj\Debug\Experimenting with variables equal to each other within a text.vbproj.CoreCompileInputs.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\obj\Debug\Experimenting with variables equal to each other within a text.exe
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\obj\Debug\Experimenting with variables equal to each other within a text.xml
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Experimenting with variables equal to each other within a text\obj\Debug\Experimenting with variables equal to each other within a text.pdb
