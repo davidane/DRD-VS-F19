@@ -38,7 +38,7 @@ Partial Class DinerForm
         Me.SoupButton.Name = "SoupButton"
         Me.SoupButton.Size = New System.Drawing.Size(165, 59)
         Me.SoupButton.TabIndex = 0
-        Me.SoupButton.Text = "Daily Soup"
+        Me.SoupButton.Text = "Daily&Soup"
         Me.ToolTip1.SetToolTip(Me.SoupButton, "Display Special")
         Me.SoupButton.UseVisualStyleBackColor = True
         '
@@ -49,7 +49,7 @@ Partial Class DinerForm
         Me.ChefButton.Name = "ChefButton"
         Me.ChefButton.Size = New System.Drawing.Size(165, 59)
         Me.ChefButton.TabIndex = 1
-        Me.ChefButton.Text = "Chef's Special"
+        Me.ChefButton.Text = "&Chef's Special"
         Me.ToolTip1.SetToolTip(Me.ChefButton, "Display Special")
         Me.ChefButton.UseVisualStyleBackColor = True
         '
@@ -60,17 +60,19 @@ Partial Class DinerForm
         Me.FishButton.Name = "FishButton"
         Me.FishButton.Size = New System.Drawing.Size(165, 59)
         Me.FishButton.TabIndex = 2
-        Me.FishButton.Text = "Daily fish"
+        Me.FishButton.Text = "Daily &Fish"
         Me.ToolTip1.SetToolTip(Me.FishButton, "Display Special")
         Me.FishButton.UseVisualStyleBackColor = True
         '
         'ExitButton
         '
+        Me.ExitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.ExitButton.Location = New System.Drawing.Point(727, 409)
         Me.ExitButton.Name = "ExitButton"
         Me.ExitButton.Size = New System.Drawing.Size(61, 29)
         Me.ExitButton.TabIndex = 3
-        Me.ExitButton.Text = "Exit"
+        Me.ExitButton.Text = "E&xit"
+        Me.ToolTip1.SetToolTip(Me.ExitButton, "Exit/close form")
         Me.ExitButton.UseVisualStyleBackColor = True
         '
         'SpecialLabel
@@ -81,11 +83,13 @@ Partial Class DinerForm
         Me.SpecialLabel.Size = New System.Drawing.Size(776, 81)
         Me.SpecialLabel.TabIndex = 4
         Me.SpecialLabel.Text = "DANE-gerous Diner's specials for today are... "
+        Me.ToolTip1.SetToolTip(Me.SpecialLabel, "Displays specials...")
         '
         'DinerForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.ExitButton
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.SpecialLabel)
         Me.Controls.Add(Me.ExitButton)
