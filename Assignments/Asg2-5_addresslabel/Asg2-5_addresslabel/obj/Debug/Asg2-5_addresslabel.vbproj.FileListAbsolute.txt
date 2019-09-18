@@ -1,0 +1,12 @@
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\bin\Debug\Asg2-5_addresslabel.exe.config
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\bin\Debug\Asg2-5_addresslabel.exe
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\bin\Debug\Asg2-5_addresslabel.pdb
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\bin\Debug\Asg2-5_addresslabel.xml
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\obj\Debug\Asg2-5_addresslabel.vbprojAssemblyReference.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\obj\Debug\Asg2_5_addresslabel.AddressLabelForm.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\obj\Debug\Asg2_5_addresslabel.Resources.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\obj\Debug\Asg2-5_addresslabel.vbproj.GenerateResource.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\obj\Debug\Asg2-5_addresslabel.vbproj.CoreCompileInputs.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\obj\Debug\Asg2-5_addresslabel.exe
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\obj\Debug\Asg2-5_addresslabel.xml
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-5_addresslabel\Asg2-5_addresslabel\obj\Debug\Asg2-5_addresslabel.pdb
