@@ -1,0 +1,12 @@
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\bin\Debug\9-18_example.exe.config
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\bin\Debug\9-18_example.exe
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\bin\Debug\9-18_example.pdb
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\bin\Debug\9-18_example.xml
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\obj\Debug\9-18_example.vbprojAssemblyReference.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\obj\Debug\_9_18_example.ExampleForm.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\obj\Debug\_9_18_example.Resources.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\obj\Debug\9-18_example.vbproj.GenerateResource.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\obj\Debug\9-18_example.vbproj.CoreCompileInputs.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\obj\Debug\9-18_example.exe
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\obj\Debug\9-18_example.xml
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\ClassRoomExamples\9-18_example\9-18_example\obj\Debug\9-18_example.pdb
