@@ -1,0 +1,12 @@
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\bin\Debug\Asg2-6_DisplayStateFlags.exe.config
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\bin\Debug\Asg2-6_DisplayStateFlags.exe
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\bin\Debug\Asg2-6_DisplayStateFlags.pdb
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\bin\Debug\Asg2-6_DisplayStateFlags.xml
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\obj\Debug\Asg2-6_DisplayStateFlags.vbprojAssemblyReference.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\obj\Debug\Asg2_6_DisplayStateFlags.DisplayStateFlags.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\obj\Debug\Asg2_6_DisplayStateFlags.Resources.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\obj\Debug\Asg2-6_DisplayStateFlags.vbproj.GenerateResource.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\obj\Debug\Asg2-6_DisplayStateFlags.vbproj.CoreCompileInputs.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\obj\Debug\Asg2-6_DisplayStateFlags.exe
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\obj\Debug\Asg2-6_DisplayStateFlags.xml
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg2-6_DisplaStateFlags\Asg2-6_DisplayStateFlags\obj\Debug\Asg2-6_DisplayStateFlags.pdb
