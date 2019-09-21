@@ -1,0 +1,24 @@
+Option Explicit On
+Option Strict On
+Option Compare Binary
+
+Imports System
+
+Module Program
+  Sub Main()
+    Dim userinput as String
+    Dim Emily as String
+    Dim Joe as String
+    Dim Dane as String
+    Userinput = Console.ReadLine()
+    
+    If userinput = Joe Then
+      Console.Write("Hello " & J & "!")
+    ElseIf userinput = Emily Then
+      Console.Write("Hello " & E & "!")
+    ElseIF userinput = Dane Then
+      Console.WriteLine("You are awesome " & D & "!!")
+    Else Console.WriteLine("I do not know you, be gone!")
+    End If
+    End Sub
+  End Module
