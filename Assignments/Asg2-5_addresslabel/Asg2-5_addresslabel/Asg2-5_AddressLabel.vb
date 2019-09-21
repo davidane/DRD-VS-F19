@@ -12,8 +12,8 @@ Public Class AddressLabelForm
             DisplayBtn.Click
 
         AddressLbl.Text = FirstNameTxtBox.Text & " " & LastNameTxtBox.Text &
-    vbCrLf & StreetAddressTxtBox.Text & vbCrLf & CityTxtBox.Text &
-    ", " & StateTxtBox.Text & "  " & ZipTxtBox.Text
+        vbCrLf & StreetAddressTxtBox.Text & vbCrLf & CityTxtBox.Text &
+        ", " & StateTxtBox.Text & "  " & ZipTxtBox.Text
         'concatenates all inputs into one string; new lines are added
 
     End Sub
