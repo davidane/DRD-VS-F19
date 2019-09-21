@@ -7,7 +7,6 @@ Imports System
 Module Program
   Sub Main()
     Dim userInput as String
-      'Console.CLS()'
       Console.WriteLine("Hello, what is your name?")
       userInput = Console.ReadLine()
       Console.WriteLine("Nice to meet you " & userinput & ".")
