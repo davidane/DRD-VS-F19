@@ -6,18 +6,15 @@ Imports System
 
 Module Program
   Sub Main()
-    Dim userinput as String
-    Dim Emily as String
-    Dim Joe as String
-    Dim Dane as String
-    Userinput = Console.ReadLine()
-    
-    If userinput = Joe Then
-      Console.Write("Hello " & J & "!")
-    ElseIf userinput = Emily Then
-      Console.Write("Hello " & E & "!")
-    ElseIF userinput = Dane Then
-      Console.WriteLine("You are awesome " & D & "!!")
+    Console.WriteLine("Hello, what is your name?")
+    Dim userInput as String = Console.ReadLine().ToString()
+
+    If userinput = "Joe" Then
+      Console.Write("Hello " & userInput & "!")
+    ElseIf userinput = "Emily" Then
+      Console.Write("Hello " & userInput & "!")
+    ElseIF userinput = "Dane" Then
+      Console.WriteLine("You are awesome " & userInput & "!!")
     Else Console.WriteLine("I do not know you, be gone!")
     End If
     End Sub
