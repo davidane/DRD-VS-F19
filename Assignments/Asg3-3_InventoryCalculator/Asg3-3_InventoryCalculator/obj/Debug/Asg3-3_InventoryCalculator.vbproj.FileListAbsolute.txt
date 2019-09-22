@@ -1,0 +1,12 @@
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\bin\Debug\Asg3-3_InventoryCalculator.exe.config
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\bin\Debug\Asg3-3_InventoryCalculator.exe
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\bin\Debug\Asg3-3_InventoryCalculator.pdb
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\bin\Debug\Asg3-3_InventoryCalculator.xml
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\obj\Debug\Asg3-3_InventoryCalculator.vbprojAssemblyReference.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\obj\Debug\Asg3_3_InventoryCalculator.InventoryCalculatorForm.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\obj\Debug\Asg3_3_InventoryCalculator.Resources.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\obj\Debug\Asg3-3_InventoryCalculator.vbproj.GenerateResource.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\obj\Debug\Asg3-3_InventoryCalculator.vbproj.CoreCompileInputs.cache
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\obj\Debug\Asg3-3_InventoryCalculator.exe
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\obj\Debug\Asg3-3_InventoryCalculator.xml
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Asg3-3_InventoryCalculator\Asg3-3_InventoryCalculator\obj\Debug\Asg3-3_InventoryCalculator.pdb
