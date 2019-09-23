@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Asg3-6_ShippingCalculator", "Asg3-6_ShippingCalculator.vbproj", "{42F59E02-85D5-41BD-BB40-96D14EFB0C36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42F59E02-85D5-41BD-BB40-96D14EFB0C36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42F59E02-85D5-41BD-BB40-96D14EFB0C36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42F59E02-85D5-41BD-BB40-96D14EFB0C36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42F59E02-85D5-41BD-BB40-96D14EFB0C36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D55993D-A181-4156-9515-E312D712D07C}
+	EndGlobalSection
+EndGlobal
