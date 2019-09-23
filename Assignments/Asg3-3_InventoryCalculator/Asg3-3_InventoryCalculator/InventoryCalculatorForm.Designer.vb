@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class InventoryCalculatorForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class InventoryCalculatorForm
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.CalculateBtn = New System.Windows.Forms.Button()
@@ -37,6 +37,10 @@ Partial Class InventoryCalculatorForm
         Me.AverageInvLbl = New System.Windows.Forms.Label()
         Me.TurnoverTxtBox = New System.Windows.Forms.TextBox()
         Me.TurnoverLbl = New System.Windows.Forms.Label()
+        Me.InputGroupBox = New System.Windows.Forms.GroupBox()
+        Me.OutputGroupBox = New System.Windows.Forms.GroupBox()
+        Me.InputGroupBox.SuspendLayout()
+        Me.OutputGroupBox.SuspendLayout()
         Me.SuspendLayout()
         '
         'CalculateBtn
@@ -73,7 +77,7 @@ Partial Class InventoryCalculatorForm
         'BeginningInvLbl
         '
         Me.BeginningInvLbl.AutoSize = True
-        Me.BeginningInvLbl.Location = New System.Drawing.Point(65, 46)
+        Me.BeginningInvLbl.Location = New System.Drawing.Point(11, 25)
         Me.BeginningInvLbl.Name = "BeginningInvLbl"
         Me.BeginningInvLbl.Size = New System.Drawing.Size(101, 13)
         Me.BeginningInvLbl.TabIndex = 3
@@ -83,7 +87,7 @@ Partial Class InventoryCalculatorForm
         'EndingInvLbl
         '
         Me.EndingInvLbl.AutoSize = True
-        Me.EndingInvLbl.Location = New System.Drawing.Point(65, 103)
+        Me.EndingInvLbl.Location = New System.Drawing.Point(11, 82)
         Me.EndingInvLbl.Name = "EndingInvLbl"
         Me.EndingInvLbl.Size = New System.Drawing.Size(87, 13)
         Me.EndingInvLbl.TabIndex = 5
@@ -93,7 +97,7 @@ Partial Class InventoryCalculatorForm
         'CostofGoodLbl
         '
         Me.CostofGoodLbl.AutoSize = True
-        Me.CostofGoodLbl.Location = New System.Drawing.Point(65, 169)
+        Me.CostofGoodLbl.Location = New System.Drawing.Point(11, 148)
         Me.CostofGoodLbl.Name = "CostofGoodLbl"
         Me.CostofGoodLbl.Size = New System.Drawing.Size(98, 13)
         Me.CostofGoodLbl.TabIndex = 7
@@ -102,7 +106,7 @@ Partial Class InventoryCalculatorForm
         '
         'BeginningInvTxtBox
         '
-        Me.BeginningInvTxtBox.Location = New System.Drawing.Point(182, 46)
+        Me.BeginningInvTxtBox.Location = New System.Drawing.Point(128, 25)
         Me.BeginningInvTxtBox.Name = "BeginningInvTxtBox"
         Me.BeginningInvTxtBox.Size = New System.Drawing.Size(118, 20)
         Me.BeginningInvTxtBox.TabIndex = 0
@@ -110,7 +114,7 @@ Partial Class InventoryCalculatorForm
         '
         'EndingInvTxtBox
         '
-        Me.EndingInvTxtBox.Location = New System.Drawing.Point(182, 103)
+        Me.EndingInvTxtBox.Location = New System.Drawing.Point(128, 82)
         Me.EndingInvTxtBox.Name = "EndingInvTxtBox"
         Me.EndingInvTxtBox.Size = New System.Drawing.Size(118, 20)
         Me.EndingInvTxtBox.TabIndex = 1
@@ -118,7 +122,7 @@ Partial Class InventoryCalculatorForm
         '
         'CostofGoodsTxtBox
         '
-        Me.CostofGoodsTxtBox.Location = New System.Drawing.Point(182, 169)
+        Me.CostofGoodsTxtBox.Location = New System.Drawing.Point(128, 148)
         Me.CostofGoodsTxtBox.Name = "CostofGoodsTxtBox"
         Me.CostofGoodsTxtBox.Size = New System.Drawing.Size(118, 20)
         Me.CostofGoodsTxtBox.TabIndex = 2
@@ -126,7 +130,7 @@ Partial Class InventoryCalculatorForm
         '
         'AverageInvTxtBox
         '
-        Me.AverageInvTxtBox.Location = New System.Drawing.Point(499, 38)
+        Me.AverageInvTxtBox.Location = New System.Drawing.Point(112, 22)
         Me.AverageInvTxtBox.Name = "AverageInvTxtBox"
         Me.AverageInvTxtBox.Size = New System.Drawing.Size(118, 20)
         Me.AverageInvTxtBox.TabIndex = 6
@@ -135,7 +139,7 @@ Partial Class InventoryCalculatorForm
         'AverageInvLbl
         '
         Me.AverageInvLbl.AutoSize = True
-        Me.AverageInvLbl.Location = New System.Drawing.Point(397, 38)
+        Me.AverageInvLbl.Location = New System.Drawing.Point(10, 22)
         Me.AverageInvLbl.Name = "AverageInvLbl"
         Me.AverageInvLbl.Size = New System.Drawing.Size(94, 13)
         Me.AverageInvLbl.TabIndex = 9
@@ -144,7 +148,7 @@ Partial Class InventoryCalculatorForm
         '
         'TurnoverTxtBox
         '
-        Me.TurnoverTxtBox.Location = New System.Drawing.Point(499, 103)
+        Me.TurnoverTxtBox.Location = New System.Drawing.Point(112, 87)
         Me.TurnoverTxtBox.Name = "TurnoverTxtBox"
         Me.TurnoverTxtBox.Size = New System.Drawing.Size(118, 20)
         Me.TurnoverTxtBox.TabIndex = 7
@@ -153,12 +157,40 @@ Partial Class InventoryCalculatorForm
         'TurnoverLbl
         '
         Me.TurnoverLbl.AutoSize = True
-        Me.TurnoverLbl.Location = New System.Drawing.Point(397, 103)
+        Me.TurnoverLbl.Location = New System.Drawing.Point(10, 87)
         Me.TurnoverLbl.Name = "TurnoverLbl"
         Me.TurnoverLbl.Size = New System.Drawing.Size(50, 13)
         Me.TurnoverLbl.TabIndex = 11
         Me.TurnoverLbl.Text = "Turnover"
         Me.ToolTip1.SetToolTip(Me.TurnoverLbl, "Displays turnover from sold goods")
+        '
+        'InputGroupBox
+        '
+        Me.InputGroupBox.Controls.Add(Me.EndingInvTxtBox)
+        Me.InputGroupBox.Controls.Add(Me.BeginningInvLbl)
+        Me.InputGroupBox.Controls.Add(Me.BeginningInvTxtBox)
+        Me.InputGroupBox.Controls.Add(Me.EndingInvLbl)
+        Me.InputGroupBox.Controls.Add(Me.CostofGoodLbl)
+        Me.InputGroupBox.Controls.Add(Me.CostofGoodsTxtBox)
+        Me.InputGroupBox.Location = New System.Drawing.Point(12, 12)
+        Me.InputGroupBox.Name = "InputGroupBox"
+        Me.InputGroupBox.Size = New System.Drawing.Size(265, 181)
+        Me.InputGroupBox.TabIndex = 12
+        Me.InputGroupBox.TabStop = False
+        Me.InputGroupBox.Text = "Input Group Box"
+        '
+        'OutputGroupBox
+        '
+        Me.OutputGroupBox.Controls.Add(Me.TurnoverTxtBox)
+        Me.OutputGroupBox.Controls.Add(Me.AverageInvLbl)
+        Me.OutputGroupBox.Controls.Add(Me.AverageInvTxtBox)
+        Me.OutputGroupBox.Controls.Add(Me.TurnoverLbl)
+        Me.OutputGroupBox.Location = New System.Drawing.Point(509, 12)
+        Me.OutputGroupBox.Name = "OutputGroupBox"
+        Me.OutputGroupBox.Size = New System.Drawing.Size(279, 126)
+        Me.OutputGroupBox.TabIndex = 13
+        Me.OutputGroupBox.TabStop = False
+        Me.OutputGroupBox.Text = "Output Group Box"
         '
         'InventoryCalculatorForm
         '
@@ -167,23 +199,18 @@ Partial Class InventoryCalculatorForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.ExitBtn
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.TurnoverTxtBox)
-        Me.Controls.Add(Me.TurnoverLbl)
-        Me.Controls.Add(Me.AverageInvTxtBox)
-        Me.Controls.Add(Me.AverageInvLbl)
-        Me.Controls.Add(Me.CostofGoodsTxtBox)
-        Me.Controls.Add(Me.CostofGoodLbl)
-        Me.Controls.Add(Me.EndingInvTxtBox)
-        Me.Controls.Add(Me.EndingInvLbl)
-        Me.Controls.Add(Me.BeginningInvTxtBox)
-        Me.Controls.Add(Me.BeginningInvLbl)
+        Me.Controls.Add(Me.OutputGroupBox)
+        Me.Controls.Add(Me.InputGroupBox)
         Me.Controls.Add(Me.ExitBtn)
         Me.Controls.Add(Me.ClearBtn)
         Me.Controls.Add(Me.CalculateBtn)
         Me.Name = "InventoryCalculatorForm"
         Me.Text = "Inventory Calculator"
+        Me.InputGroupBox.ResumeLayout(False)
+        Me.InputGroupBox.PerformLayout()
+        Me.OutputGroupBox.ResumeLayout(False)
+        Me.OutputGroupBox.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -201,4 +228,6 @@ Partial Class InventoryCalculatorForm
     Friend WithEvents AverageInvLbl As Label
     Friend WithEvents TurnoverTxtBox As TextBox
     Friend WithEvents TurnoverLbl As Label
+    Friend WithEvents InputGroupBox As GroupBox
+    Friend WithEvents OutputGroupBox As GroupBox
 End Class
