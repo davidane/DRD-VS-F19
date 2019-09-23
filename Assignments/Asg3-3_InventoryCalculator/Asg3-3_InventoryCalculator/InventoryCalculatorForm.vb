@@ -1,7 +1,8 @@
 ﻿'Dane Davids
 'RCET0265
 'Asg3-3_InventoryCalculator 
-'
+'https://github.com/davidane/DRD-VS-F19/tree/master/Assignments/Asg3-3 _
+'_InventoryCalculator/ Asg3 - 3_InventoryCalculator
 
 Option Strict On
 Option Explicit On
