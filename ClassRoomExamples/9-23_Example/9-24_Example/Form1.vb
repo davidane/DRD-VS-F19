@@ -60,6 +60,10 @@ Public Class Form1
 
     'End Sub
 
+    'Sub Beep()
+    '    Beep(300)
+
+    'End Sub
     Private Sub ExitBtn_Click(sender As Object, e As EventArgs) Handles ExitBtn.Click
         Me.Close()
     End Sub
