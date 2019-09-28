@@ -89,7 +89,6 @@ Partial Class MathContest
         Me.GradeTxtBox.Name = "GradeTxtBox"
         Me.GradeTxtBox.Size = New System.Drawing.Size(25, 20)
         Me.GradeTxtBox.TabIndex = 5
-        Me.GradeTxtBox.Text = "99"
         Me.ToolTip1.SetToolTip(Me.GradeTxtBox, "Enter Grade")
         '
         'FirstNameTxtBox
