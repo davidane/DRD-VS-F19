@@ -79,7 +79,7 @@ Partial Class MathContest
         Me.AgeTxtBox.MaxLength = 2
         Me.AgeTxtBox.Name = "AgeTxtBox"
         Me.AgeTxtBox.Size = New System.Drawing.Size(25, 20)
-        Me.AgeTxtBox.TabIndex = 6
+        Me.AgeTxtBox.TabIndex = 4
         Me.ToolTip1.SetToolTip(Me.AgeTxtBox, "Enter Age")
         '
         'GradeTxtBox
@@ -88,7 +88,7 @@ Partial Class MathContest
         Me.GradeTxtBox.MaxLength = 1
         Me.GradeTxtBox.Name = "GradeTxtBox"
         Me.GradeTxtBox.Size = New System.Drawing.Size(25, 20)
-        Me.GradeTxtBox.TabIndex = 5
+        Me.GradeTxtBox.TabIndex = 3
         Me.ToolTip1.SetToolTip(Me.GradeTxtBox, "Enter Grade")
         '
         'FirstNameTxtBox
@@ -96,7 +96,7 @@ Partial Class MathContest
         Me.FirstNameTxtBox.Location = New System.Drawing.Point(75, 20)
         Me.FirstNameTxtBox.Name = "FirstNameTxtBox"
         Me.FirstNameTxtBox.Size = New System.Drawing.Size(100, 20)
-        Me.FirstNameTxtBox.TabIndex = 8
+        Me.FirstNameTxtBox.TabIndex = 1
         Me.ToolTip1.SetToolTip(Me.FirstNameTxtBox, "Enter First Name")
         '
         'AgeLbl
@@ -114,7 +114,7 @@ Partial Class MathContest
         Me.LastNameTxtBox.Location = New System.Drawing.Point(75, 54)
         Me.LastNameTxtBox.Name = "LastNameTxtBox"
         Me.LastNameTxtBox.Size = New System.Drawing.Size(100, 20)
-        Me.LastNameTxtBox.TabIndex = 4
+        Me.LastNameTxtBox.TabIndex = 2
         Me.ToolTip1.SetToolTip(Me.LastNameTxtBox, "Enter Last Name")
         '
         'GradeLbl
@@ -124,7 +124,7 @@ Partial Class MathContest
         Me.GradeLbl.Name = "GradeLbl"
         Me.GradeLbl.Size = New System.Drawing.Size(60, 13)
         Me.GradeLbl.TabIndex = 2
-        Me.GradeLbl.Text = "Grade (1-6)"
+        Me.GradeLbl.Text = "Grade (1-4)"
         Me.ToolTip1.SetToolTip(Me.GradeLbl, "Enter Grade")
         '
         'FirstNameLbl
@@ -156,7 +156,7 @@ Partial Class MathContest
         Me.MathFunctionsGroupBox.Location = New System.Drawing.Point(262, 219)
         Me.MathFunctionsGroupBox.Name = "MathFunctionsGroupBox"
         Me.MathFunctionsGroupBox.Size = New System.Drawing.Size(90, 136)
-        Me.MathFunctionsGroupBox.TabIndex = 1
+        Me.MathFunctionsGroupBox.TabIndex = 5
         Me.MathFunctionsGroupBox.TabStop = False
         Me.MathFunctionsGroupBox.Text = "Math Functions"
         Me.ToolTip1.SetToolTip(Me.MathFunctionsGroupBox, "Select Math Function To Be Used")
@@ -167,7 +167,7 @@ Partial Class MathContest
         Me.DivideRBtn.Location = New System.Drawing.Point(15, 96)
         Me.DivideRBtn.Name = "DivideRBtn"
         Me.DivideRBtn.Size = New System.Drawing.Size(55, 17)
-        Me.DivideRBtn.TabIndex = 5
+        Me.DivideRBtn.TabIndex = 9
         Me.DivideRBtn.TabStop = True
         Me.DivideRBtn.Text = "Divide"
         Me.ToolTip1.SetToolTip(Me.DivideRBtn, "Divide")
@@ -179,7 +179,7 @@ Partial Class MathContest
         Me.MultiplyRBtn.Location = New System.Drawing.Point(15, 73)
         Me.MultiplyRBtn.Name = "MultiplyRBtn"
         Me.MultiplyRBtn.Size = New System.Drawing.Size(60, 17)
-        Me.MultiplyRBtn.TabIndex = 4
+        Me.MultiplyRBtn.TabIndex = 8
         Me.MultiplyRBtn.TabStop = True
         Me.MultiplyRBtn.Text = "Multiply"
         Me.ToolTip1.SetToolTip(Me.MultiplyRBtn, "Multiply")
@@ -191,7 +191,7 @@ Partial Class MathContest
         Me.AddRBtn.Location = New System.Drawing.Point(15, 27)
         Me.AddRBtn.Name = "AddRBtn"
         Me.AddRBtn.Size = New System.Drawing.Size(44, 17)
-        Me.AddRBtn.TabIndex = 2
+        Me.AddRBtn.TabIndex = 6
         Me.AddRBtn.TabStop = True
         Me.AddRBtn.Text = "Add"
         Me.ToolTip1.SetToolTip(Me.AddRBtn, "Add")
@@ -203,7 +203,7 @@ Partial Class MathContest
         Me.SubtractRBtn.Location = New System.Drawing.Point(15, 50)
         Me.SubtractRBtn.Name = "SubtractRBtn"
         Me.SubtractRBtn.Size = New System.Drawing.Size(65, 17)
-        Me.SubtractRBtn.TabIndex = 3
+        Me.SubtractRBtn.TabIndex = 7
         Me.SubtractRBtn.TabStop = True
         Me.SubtractRBtn.Text = "Subtract"
         Me.ToolTip1.SetToolTip(Me.SubtractRBtn, "Subtract")
@@ -215,7 +215,7 @@ Partial Class MathContest
         Me.FirstNumberTxtBox.Name = "FirstNumberTxtBox"
         Me.FirstNumberTxtBox.ReadOnly = True
         Me.FirstNumberTxtBox.Size = New System.Drawing.Size(100, 20)
-        Me.FirstNumberTxtBox.TabIndex = 9
+        Me.FirstNumberTxtBox.TabIndex = 17
         Me.ToolTip1.SetToolTip(Me.FirstNumberTxtBox, "First Given Number")
         '
         'SecondNumberTxtBox
@@ -224,7 +224,7 @@ Partial Class MathContest
         Me.SecondNumberTxtBox.Name = "SecondNumberTxtBox"
         Me.SecondNumberTxtBox.ReadOnly = True
         Me.SecondNumberTxtBox.Size = New System.Drawing.Size(100, 20)
-        Me.SecondNumberTxtBox.TabIndex = 10
+        Me.SecondNumberTxtBox.TabIndex = 18
         Me.ToolTip1.SetToolTip(Me.SecondNumberTxtBox, "Second Given Number")
         '
         'GivenNumbersGroupBox
@@ -236,7 +236,7 @@ Partial Class MathContest
         Me.GivenNumbersGroupBox.Location = New System.Drawing.Point(39, 211)
         Me.GivenNumbersGroupBox.Name = "GivenNumbersGroupBox"
         Me.GivenNumbersGroupBox.Size = New System.Drawing.Size(200, 86)
-        Me.GivenNumbersGroupBox.TabIndex = 2
+        Me.GivenNumbersGroupBox.TabIndex = 16
         Me.GivenNumbersGroupBox.TabStop = False
         Me.GivenNumbersGroupBox.Text = "Given Numbers"
         Me.ToolTip1.SetToolTip(Me.GivenNumbersGroupBox, "Given Numbers")
@@ -263,10 +263,11 @@ Partial Class MathContest
         '
         'SubmitBtn
         '
+        Me.SubmitBtn.Enabled = False
         Me.SubmitBtn.Location = New System.Drawing.Point(574, 29)
         Me.SubmitBtn.Name = "SubmitBtn"
         Me.SubmitBtn.Size = New System.Drawing.Size(194, 79)
-        Me.SubmitBtn.TabIndex = 3
+        Me.SubmitBtn.TabIndex = 12
         Me.SubmitBtn.Text = "Submit"
         Me.ToolTip1.SetToolTip(Me.SubmitBtn, "Click To Submit Answer")
         Me.SubmitBtn.UseVisualStyleBackColor = True
@@ -276,17 +277,18 @@ Partial Class MathContest
         Me.ClearBtn.Location = New System.Drawing.Point(574, 114)
         Me.ClearBtn.Name = "ClearBtn"
         Me.ClearBtn.Size = New System.Drawing.Size(194, 79)
-        Me.ClearBtn.TabIndex = 4
+        Me.ClearBtn.TabIndex = 13
         Me.ClearBtn.Text = "Clear"
         Me.ToolTip1.SetToolTip(Me.ClearBtn, "Clear All Data For Current Student")
         Me.ClearBtn.UseVisualStyleBackColor = True
         '
         'SummaryBtn
         '
+        Me.SummaryBtn.Enabled = False
         Me.SummaryBtn.Location = New System.Drawing.Point(574, 199)
         Me.SummaryBtn.Name = "SummaryBtn"
         Me.SummaryBtn.Size = New System.Drawing.Size(194, 79)
-        Me.SummaryBtn.TabIndex = 5
+        Me.SummaryBtn.TabIndex = 14
         Me.SummaryBtn.Text = "Summary"
         Me.ToolTip1.SetToolTip(Me.SummaryBtn, "Click To View Summary Of All 5 Questions")
         Me.SummaryBtn.UseVisualStyleBackColor = True
@@ -296,7 +298,7 @@ Partial Class MathContest
         Me.ExitBtn.Location = New System.Drawing.Point(574, 284)
         Me.ExitBtn.Name = "ExitBtn"
         Me.ExitBtn.Size = New System.Drawing.Size(194, 79)
-        Me.ExitBtn.TabIndex = 6
+        Me.ExitBtn.TabIndex = 15
         Me.ExitBtn.Text = "Exit Form"
         Me.ToolTip1.SetToolTip(Me.ExitBtn, "Click To Exit Form")
         Me.ExitBtn.UseVisualStyleBackColor = True
@@ -306,7 +308,7 @@ Partial Class MathContest
         Me.StudentAnswerTxtBox.Location = New System.Drawing.Point(94, 21)
         Me.StudentAnswerTxtBox.Name = "StudentAnswerTxtBox"
         Me.StudentAnswerTxtBox.Size = New System.Drawing.Size(100, 20)
-        Me.StudentAnswerTxtBox.TabIndex = 7
+        Me.StudentAnswerTxtBox.TabIndex = 11
         Me.ToolTip1.SetToolTip(Me.StudentAnswerTxtBox, "Enter Student Answer")
         '
         'StudentAnswerLbl
@@ -326,7 +328,7 @@ Partial Class MathContest
         Me.StudentAnswerGroupBox.Location = New System.Drawing.Point(39, 314)
         Me.StudentAnswerGroupBox.Name = "StudentAnswerGroupBox"
         Me.StudentAnswerGroupBox.Size = New System.Drawing.Size(200, 49)
-        Me.StudentAnswerGroupBox.TabIndex = 9
+        Me.StudentAnswerGroupBox.TabIndex = 10
         Me.StudentAnswerGroupBox.TabStop = False
         Me.StudentAnswerGroupBox.Text = "Student Answer"
         Me.ToolTip1.SetToolTip(Me.StudentAnswerGroupBox, "Enter Student Answer")
