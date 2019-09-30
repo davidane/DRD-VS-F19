@@ -42,7 +42,7 @@ Public Class ShippingCalculator
             MessageBox.Show(errorMessage, "Something went wrong")
         Else
             ShippingChargeTxtBox.Text = FormatCurrency(((ounceWeight) +
-                                                   (poundsWeight * 16)) * 0.12)
+                                                   (poundsWeight * 16)) * shippingRate)
         End If
 
     End Sub
