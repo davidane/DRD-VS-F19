@@ -7,30 +7,42 @@ Option Explicit On
 Option Strict On
 
 Public Class MathContest
-    Dim math As Integer 'add = 1; subtract = 2; multiply = 3; divide = 4
     Dim exitForm As Boolean
     Dim firstNameTxtBoxChanged As Boolean
     Dim lastNameTxtBoxChanged As Boolean
     Dim gradeTxtBoxChanged As Boolean
     Dim ageTxtBoxChanged As Boolean
+    Dim randomGen As Random = New Random(DateTime.Now.Millisecond)
+    Dim randomNumberOne As Integer = randomGen.Next(1, 10)
+    Dim randNumberTwo As Integer = randomGen.Next(1, 10)
+    Dim correctAnswers As Integer
+    Dim incorrectAnswers As Integer
+    Dim firstName As String
+    Dim lastName As String
+    Dim grade As Integer
+    Dim age As Integer
 
 
 
-    Private Sub SubmitBtn_Click(sender As Object, e As EventArgs) Handles _
-            SubmitBtn.Click
-        Dim firstName As String
-        Dim lastName As String
-        Dim grade As Integer
-        Dim age As Integer
+    Private Sub SubmitBtn_Click(sender As Object, e As EventArgs) Handles SubmitBtn.Click
         Dim errorMessage As String = ""
+        Dim studentAnswer As Double
+        Dim generatedAnswer As Double
+        Dim numberOne As Double = CDbl(FirstNumberTxtBox.Text)
+        Dim numberTwo As Double = CDbl(SecondNumberTxtBox.Text)
 
-
-
+        Try
+            studentAnswer = CDbl(StudentAnswerTxtBox.Text)
+        Catch ex As InvalidCastException
+            errorMessage = errorMessage & "Please enter a valid number with number rounded to nearest tenths"
+        End Try
         Try
             age = CInt(AgeTxtBox.Text)
         Catch ex As InvalidCastException
             errorMessage = errorMessage & "Please enter an age between 7 and" _
                 & " 11" & vbNewLine
+            AgeTxtBox.Select()
+            AgeTxtBox.Clear()
         End Try
         Try
             grade = CInt(GradeTxtBox.Text)
@@ -40,7 +52,6 @@ Public Class MathContest
             GradeTxtBox.Select()
             GradeTxtBox.Clear()
         End Try
-
         Try
             lastName = LastNameTxtBox.Text
         Catch ex As Exception
@@ -57,9 +68,29 @@ Public Class MathContest
             FirstNameTxtBox.Select()
             FirstNameTxtBox.Clear()
         End Try
+        Select Case True
+            Case AddRBtn.Checked
+                generatedAnswer = (numberOne + numberTwo)
+                If studentAnswer > (generatedAnswer + (generatedAnswer * 0.05)) And studentAnswer < (generatedAnswer - (generatedAnswer * 0.05)) Then
+                    MessageBox.Show(firstName & " " & lastName & "'s was incorrect, The correct answer was " & generatedAnswer)
+                    incorrectAnswers = +1
+                Else
+                    MessageBox.Show("Good Job " & firstName & " " & lastName & ", your answer was correct")
+                    correctAnswers = +1
+                End If
+            Case SubtractRBtn.Checked
+
+            Case MultiplyRBtn.Checked
+
+            Case DivideRBtn.Checked
+        End Select
         If errorMessage <> "" Then
             MessageBox.Show(errorMessage, "Something went wrong...")
+
+        Else
+
         End If
+
     End Sub
 
     Private Sub AgeTxtBox_TextChanged(sender As Object, e As EventArgs) _
@@ -84,6 +115,7 @@ Public Class MathContest
 
     Private Sub ClearBtn_Click(sender As Object, e As EventArgs) Handles _
             ClearBtn.Click
+
         ClearAllFields()
     End Sub
 
@@ -95,6 +127,12 @@ Public Class MathContest
         FirstNumberTxtBox.Text = ""
         SecondNumberTxtBox.Text = ""
         StudentAnswerTxtBox.Text = ""
+        firstNameTxtBoxChanged = False
+        lastNameTxtBoxChanged = False
+        gradeTxtBoxChanged = False
+        ageTxtBoxChanged = False
+
+
     End Sub
 
 
@@ -126,22 +164,30 @@ Public Class MathContest
         'Button Is pressed, will reset code as if the program relaoded.
         SubmitBtnDisabled()
         SummaryBtnDisabled()
-        AddRBtn.Select()
+        AddRBtn.Select() 'could also do AddRBtn.Checked = True
         exitForm = False
         FirstNameTxtBox.Select()
         lastNameTxtBoxChanged = False
         firstNameTxtBoxChanged = False
         ageTxtBoxChanged = False
         gradeTxtBoxChanged = False
+        FirstNumberTxtBox.Text = CStr(randomNumberOne)
+        SecondNumberTxtBox.Text = CStr(randNumberTwo)
+        SubmitBtnDisabled()
+        SummaryBtnDisabled()
+        FirstNumberTxtBox.Text = CStr(randomNumberOne)
+        SecondNumberTxtBox.Text = CStr(randNumberTwo)
     End Sub
 
     Private Sub StudentInfoGroupBox_Leave(sender As Object, e As EventArgs) _
                 Handles StudentInfoGroupBox.Leave
         If firstNameTxtBoxChanged = True AndAlso lastNameTxtBoxChanged = True _
-                AndAlso ageTxtBoxChanged = True AndAlso gradeTxtBoxChanged =
-                True Then
+                AndAlso ageTxtBoxChanged = True AndAlso
+                gradeTxtBoxChanged = True Then
             SubmitBtnEnabled()
             SummaryBtnEnabled()
+            FirstNumberTxtBox.Text = CStr(randomNumberOne)
+            SecondNumberTxtBox.Text = CStr(randNumberTwo)
         End If
     End Sub
 
@@ -149,10 +195,6 @@ Public Class MathContest
         SubmitBtn.Enabled = True
     End Sub
 
-    Private Sub AddRBtn_MouseClick(sender As Object, e As MouseEventArgs) _
-            Handles AddRBtn.MouseClick
-        math = 1
-    End Sub
 
     Sub SummaryBtnEnabled()
         SummaryBtn.Enabled = True
@@ -165,19 +207,7 @@ Public Class MathContest
     Sub SubmitBtnDisabled()
         SubmitBtn.Enabled = False
     End Sub
-
-    Private Sub SubtractRBtn_MouseClick(sender As Object, e As MouseEventArgs) _
-            Handles SubtractRBtn.MouseClick
-        math = 2
-    End Sub
-
-    Private Sub MultiplyRBtn_MouseClick(sender As Object, e As MouseEventArgs) _
-            Handles MultiplyRBtn.MouseClick
-        math = 3
-    End Sub
-
-    Private Sub DivideRBtn_MouseClick(sender As Object, e As MouseEventArgs) _
-            Handles DivideRBtn.MouseClick
-        math = 4
-    End Sub
 End Class
+
+
+'need to set up summary and remaining math functions
