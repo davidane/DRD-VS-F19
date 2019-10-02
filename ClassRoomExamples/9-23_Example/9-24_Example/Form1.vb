@@ -6,8 +6,9 @@ Option Explicit On
 Option Compare Text 'binary is default
 
 Public Class Form1
-    Private Sub GoBtn_Click(sender As Object, e As EventArgs) Handles GoBtn.Click
+    Private Sub GoBtn_Click(sender As Object, e As EventArgs) Handles GoRespondBtn.Click
         compareStrings()
+        response()
     End Sub
 
     Sub compareNumbers()
@@ -67,6 +68,24 @@ Public Class Form1
     Private Sub ExitBtn_Click(sender As Object, e As EventArgs) Handles ExitBtn.Click
         Me.Close()
     End Sub
+    Sub response()
+
+        'If BadDayRadioButton.Checked = True Then
+        '    MessageBox.Show("Thats so sad...")
+        'End If
+
+        Select Case True
+            Case BadDayRadioButton.Checked
+                MessageBox.Show("Thats so sad...")
+            Case MehRadioButton.Checked
+                MessageBox.Show("Atleast you are not dead")
+            Case GreatDayRadioButton.Checked
+                MessageBox.Show("Good for you!")
+            Case Else
+                MessageBox.Show("Nothing was picked")
+        End Select
+    End Sub
+
 
 End Class
 
