@@ -71,18 +71,40 @@ Public Class MathContest
         Select Case True
             Case AddRBtn.Checked
                 generatedAnswer = (numberOne + numberTwo)
-                If studentAnswer > (generatedAnswer + (generatedAnswer * 0.05)) And studentAnswer < (generatedAnswer - (generatedAnswer * 0.05)) Then
-                    MessageBox.Show(firstName & " " & lastName & "'s was incorrect, The correct answer was " & generatedAnswer)
+                If studentAnswer > (generatedAnswer + (generatedAnswer * 0.05)) Or studentAnswer < (generatedAnswer - (generatedAnswer * 0.05)) Then
+                    MessageBox.Show(firstName & " " & lastName & "'s answer was incorrect, the correct answer was " & generatedAnswer)
                     incorrectAnswers = +1
                 Else
                     MessageBox.Show("Good Job " & firstName & " " & lastName & ", your answer was correct")
                     correctAnswers = +1
                 End If
             Case SubtractRBtn.Checked
-
+                generatedAnswer = (numberOne - numberTwo)
+                If studentAnswer > (generatedAnswer + (generatedAnswer * 0.05)) Or studentAnswer < (generatedAnswer - (generatedAnswer * 0.05)) Then
+                    MessageBox.Show(firstName & " " & lastName & "'s answer was incorrect, the correct answer was " & generatedAnswer)
+                    incorrectAnswers = +1
+                Else
+                    MessageBox.Show("Good Job " & firstName & " " & lastName & ", your answer was correct")
+                    correctAnswers = +1
+                End If
             Case MultiplyRBtn.Checked
-
+                generatedAnswer = (numberOne * numberTwo)
+                If studentAnswer > (generatedAnswer + (generatedAnswer * 0.05)) Or studentAnswer < (generatedAnswer - (generatedAnswer * 0.05)) Then
+                    MessageBox.Show(firstName & " " & lastName & "'s answer was incorrect, the correct answer was " & generatedAnswer)
+                    incorrectAnswers = +1
+                Else
+                    MessageBox.Show("Good Job " & firstName & " " & lastName & ", your answer was correct")
+                    correctAnswers = +1
+                End If
             Case DivideRBtn.Checked
+                generatedAnswer = (numberOne / numberTwo)
+                If studentAnswer > (generatedAnswer + (generatedAnswer * 0.05)) Or studentAnswer < (generatedAnswer - (generatedAnswer * 0.05)) Then
+                    MessageBox.Show(firstName & " " & lastName & "'s answer was incorrect, the correct answer was " & generatedAnswer)
+                    incorrectAnswers = +1
+                Else
+                    MessageBox.Show("Good Job " & firstName & " " & lastName & ", your answer was correct")
+                    correctAnswers = +1
+                End If
         End Select
         If errorMessage <> "" Then
             MessageBox.Show(errorMessage, "Something went wrong...")

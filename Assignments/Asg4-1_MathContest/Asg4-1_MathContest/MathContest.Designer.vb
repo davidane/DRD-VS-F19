@@ -155,7 +155,7 @@ Partial Class MathContest
         Me.MathFunctionsGroupBox.Controls.Add(Me.SubtractRBtn)
         Me.MathFunctionsGroupBox.Location = New System.Drawing.Point(262, 219)
         Me.MathFunctionsGroupBox.Name = "MathFunctionsGroupBox"
-        Me.MathFunctionsGroupBox.Size = New System.Drawing.Size(90, 136)
+        Me.MathFunctionsGroupBox.Size = New System.Drawing.Size(140, 136)
         Me.MathFunctionsGroupBox.TabIndex = 5
         Me.MathFunctionsGroupBox.TabStop = False
         Me.MathFunctionsGroupBox.Text = "Math Functions"
@@ -166,10 +166,10 @@ Partial Class MathContest
         Me.DivideRBtn.AutoSize = True
         Me.DivideRBtn.Location = New System.Drawing.Point(15, 96)
         Me.DivideRBtn.Name = "DivideRBtn"
-        Me.DivideRBtn.Size = New System.Drawing.Size(55, 17)
+        Me.DivideRBtn.Size = New System.Drawing.Size(95, 17)
         Me.DivideRBtn.TabIndex = 9
         Me.DivideRBtn.TabStop = True
-        Me.DivideRBtn.Text = "Divide"
+        Me.DivideRBtn.Text = "Divide (#1/#2)"
         Me.ToolTip1.SetToolTip(Me.DivideRBtn, "Divide")
         Me.DivideRBtn.UseVisualStyleBackColor = True
         '
@@ -202,10 +202,10 @@ Partial Class MathContest
         Me.SubtractRBtn.AutoSize = True
         Me.SubtractRBtn.Location = New System.Drawing.Point(15, 50)
         Me.SubtractRBtn.Name = "SubtractRBtn"
-        Me.SubtractRBtn.Size = New System.Drawing.Size(65, 17)
+        Me.SubtractRBtn.Size = New System.Drawing.Size(103, 17)
         Me.SubtractRBtn.TabIndex = 7
         Me.SubtractRBtn.TabStop = True
-        Me.SubtractRBtn.Text = "Subtract"
+        Me.SubtractRBtn.Text = "Subtract (#1-#2)"
         Me.ToolTip1.SetToolTip(Me.SubtractRBtn, "Subtract")
         Me.SubtractRBtn.UseVisualStyleBackColor = True
         '
