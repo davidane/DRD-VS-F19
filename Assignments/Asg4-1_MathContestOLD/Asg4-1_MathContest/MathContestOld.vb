@@ -6,7 +6,7 @@
 Option Explicit On
 Option Strict On
 
-Public Class MathContest
+Public Class MathContestOld
     Dim exitForm As Boolean
     Dim firstNameTxtBoxChanged As Boolean
     Dim lastNameTxtBoxChanged As Boolean
@@ -36,8 +36,9 @@ Public Class MathContest
         Catch ex As InvalidCastException
             errorMessage = errorMessage & "Please enter a valid number with number rounded to nearest tenths"
         End Try
+
         Try
-            age = CInt(AgeTxtBox.Text)
+            age = CInt(AgeTxtBox.Text) And CInt(age < 7) And CInt(age > 11)
         Catch ex As InvalidCastException
             errorMessage = errorMessage & "Please enter an age between 7 and" _
                 & " 11" & vbNewLine
@@ -137,7 +138,6 @@ Public Class MathContest
 
     Private Sub ClearBtn_Click(sender As Object, e As EventArgs) Handles _
             ClearBtn.Click
-
         ClearAllFields()
     End Sub
 
@@ -153,8 +153,6 @@ Public Class MathContest
         lastNameTxtBoxChanged = False
         gradeTxtBoxChanged = False
         ageTxtBoxChanged = False
-
-
     End Sub
 
 
