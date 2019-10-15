@@ -12,16 +12,12 @@ Public Class MathContestOld
     Dim lastNameTxtBoxChanged As Boolean
     Dim gradeTxtBoxChanged As Boolean
     Dim ageTxtBoxChanged As Boolean
-    Dim randomGen As Random = New Random(DateTime.Now.Millisecond)
-    Dim randomNumberOne As Integer = randomGen.Next(1, 10)
-    Dim randNumberTwo As Integer = randomGen.Next(1, 10)
     Dim correctAnswers As Integer
     Dim incorrectAnswers As Integer
     Dim firstName As String
     Dim lastName As String
     Dim grade As Integer
     Dim age As Integer
-
 
 
     Private Sub SubmitBtn_Click(sender As Object, e As EventArgs) Handles SubmitBtn.Click
@@ -113,7 +109,16 @@ Public Class MathContestOld
         Else
 
         End If
+        randomNumbers()
 
+    End Sub
+
+    Sub randomNumbers()
+        Dim randomGen As Random = New Random(DateTime.Now.Millisecond)
+        Dim randomNumberOne As Integer = randomGen.Next(1, 10)
+        Dim randomNumberTwo As Integer = randomGen.Next(1, 10)
+        FirstNumberTxtBox.Text = CStr(randomNumberOne)
+        SecondNumberTxtBox.Text = CStr(randomNumberTwo)
     End Sub
 
     Private Sub AgeTxtBox_TextChanged(sender As Object, e As EventArgs) _
@@ -191,12 +196,11 @@ Public Class MathContestOld
         firstNameTxtBoxChanged = False
         ageTxtBoxChanged = False
         gradeTxtBoxChanged = False
-        FirstNumberTxtBox.Text = CStr(randomNumberOne)
-        SecondNumberTxtBox.Text = CStr(randNumberTwo)
+        'FirstNumberTxtBox.Text = CStr(randomNumberOne)
+        'SecondNumberTxtBox.Text = CStr(randNumberTwo)
         SubmitBtnDisabled()
         SummaryBtnDisabled()
-        FirstNumberTxtBox.Text = CStr(randomNumberOne)
-        SecondNumberTxtBox.Text = CStr(randNumberTwo)
+        randomNumbers()
     End Sub
 
     Private Sub StudentInfoGroupBox_Leave(sender As Object, e As EventArgs) _
@@ -206,8 +210,9 @@ Public Class MathContestOld
                 gradeTxtBoxChanged = True Then
             SubmitBtnEnabled()
             SummaryBtnEnabled()
-            FirstNumberTxtBox.Text = CStr(randomNumberOne)
-            SecondNumberTxtBox.Text = CStr(randNumberTwo)
+            'FirstNumberTxtBox.Text = CStr(randomNumberOne)
+            'SecondNumberTxtBox.Text = CStr(randNumberTwo)
+            randomNumbers()
         End If
     End Sub
 
