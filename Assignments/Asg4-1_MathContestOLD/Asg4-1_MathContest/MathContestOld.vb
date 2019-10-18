@@ -7,21 +7,44 @@ Option Explicit On
 Option Strict On
 
 Public Class MathContestOld
-    Dim exitForm As Boolean
+
+    Dim exitForm As Boolean 'class variable was added because exitting was _
+    'Not allowed when no values were changed in the text boxes of the _
+    'StudentInformationGroupBox
+
+    'values were added so that multiple students could use the program _
+    'without having To Exit the form altogether; only a clear Or summary _
+    'will reset Boolean values of these variables
     Dim firstNameTxtBoxChanged As Boolean
     Dim lastNameTxtBoxChanged As Boolean
     Dim gradeTxtBoxChanged As Boolean
     Dim ageTxtBoxChanged As Boolean
+
+    'correct answers were made class level so that they could be cleared and _
+    'Set globally. Another way, maybe better, would be To Dim them As a list _
+    'And alter that via another method
     Dim correctAnswers As Integer
     Dim incorrectAnswers As Integer
-    Dim firstName As String
-    Dim lastName As String
-    Dim grade As Integer
-    Dim age As Integer
 
 
-    Private Sub SubmitBtn_Click(sender As Object, e As EventArgs) Handles SubmitBtn.Click
+
+    Private Sub SubmitBtn_Click(sender As Object, e As EventArgs) Handles _
+            SubmitBtn.Click
+
+        'names, age, and grade were dimmed for ease of coding; could probably _
+        'get away with not doing it, but...
+        Dim firstName As String
+        Dim lastName As String
+        Dim grade As Integer
+        Dim age As Integer
+
+        'error message was dimmed as a string in the case that multiple text _
+        'boxes were Not entered correctly; And initiallized With a "" because _
+        'at the End Of the Sub, the errorMessage <> "" means that if the _
+        'error message was changed that it will do something
         Dim errorMessage As String = ""
+
+
         Dim studentAnswer As Double
         Dim generatedAnswer As Double
         Dim numberOne As Double = CDbl(FirstNumberTxtBox.Text)
@@ -30,7 +53,8 @@ Public Class MathContestOld
         Try
             studentAnswer = CDbl(StudentAnswerTxtBox.Text)
         Catch ex As InvalidCastException
-            errorMessage = errorMessage & "Please enter a valid number with number rounded to nearest tenths"
+            errorMessage = errorMessage & "Please enter a valid number with " _
+                & "number rounded to nearest tenths"
         End Try
 
         Try
@@ -68,7 +92,9 @@ Public Class MathContestOld
         Select Case True
             Case AddRBtn.Checked
                 generatedAnswer = (numberOne + numberTwo)
-                If studentAnswer > (generatedAnswer + (generatedAnswer * 0.05)) Or studentAnswer < (generatedAnswer - (generatedAnswer * 0.05)) Then
+                If studentAnswer > (generatedAnswer + (generatedAnswer * 0.05
+                    )) Or studentAnswer < (generatedAnswer - (generatedAnswer _
+                      * 0.05)) Then
                     MessageBox.Show(firstName & " " & lastName & "'s answer was incorrect, the correct answer was " & generatedAnswer)
                     incorrectAnswers = +1
                 Else
@@ -113,7 +139,7 @@ Public Class MathContestOld
 
     End Sub
 
-    Sub randomNumbers()
+    Private Sub randomNumbers()
         Dim randomGen As Random = New Random(DateTime.Now.Millisecond)
         Dim randomNumberOne As Integer = randomGen.Next(1, 10)
         Dim randomNumberTwo As Integer = randomGen.Next(1, 10)
@@ -146,7 +172,7 @@ Public Class MathContestOld
         ClearAllFields()
     End Sub
 
-    Sub ClearAllFields()
+    Private Sub ClearAllFields()
         FirstNameTxtBox.Text = ""
         LastNameTxtBox.Text = ""
         GradeTxtBox.Text = ""
@@ -161,7 +187,7 @@ Public Class MathContestOld
     End Sub
 
 
-    Sub DisplaySummary()
+    Private Sub DisplaySummary()
 
     End Sub
     Private Sub SummaryBtn_Click(sender As Object, e As EventArgs) Handles _
@@ -176,7 +202,7 @@ Public Class MathContestOld
         ExitSub()
     End Sub
 
-    Sub ExitSub()
+    Private Sub ExitSub()
         Me.Close()
     End Sub
 
@@ -185,7 +211,7 @@ Public Class MathContestOld
         MathContestLoadAndRestart()
     End Sub
 
-    Sub MathContestLoadAndRestart() 'restart is refering to when the summary _
+    Private Sub MathContestLoadAndRestart() 'restart is refering to when the summary _
         'Button Is pressed, will reset code as if the program relaoded.
         SubmitBtnDisabled()
         SummaryBtnDisabled()
@@ -216,20 +242,20 @@ Public Class MathContestOld
         End If
     End Sub
 
-    Sub SubmitBtnEnabled()
+    Private Sub SubmitBtnEnabled()
         SubmitBtn.Enabled = True
     End Sub
 
 
-    Sub SummaryBtnEnabled()
+    Private Sub SummaryBtnEnabled()
         SummaryBtn.Enabled = True
     End Sub
 
-    Sub SummaryBtnDisabled()
+    Private Sub SummaryBtnDisabled()
         SummaryBtn.Enabled = False
     End Sub
 
-    Sub SubmitBtnDisabled()
+    Private Sub SubmitBtnDisabled()
         SubmitBtn.Enabled = False
     End Sub
 End Class
