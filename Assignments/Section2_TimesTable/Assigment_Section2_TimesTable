@@ -1,0 +1,22 @@
+'Dane Davids
+'RCET0265
+'SimpleCalculator
+'Selects whether to add or multiply two numbers
+
+Option Explicit On
+Option Strict On
+
+Module Program
+
+  Sub Main()
+
+    For i = 1 To 12
+      Console.WriteLine(i & " | ")
+      For j = 1 To 12
+      Console.Write(i*j & " | ")
+      Next
+    Next
+
+  End Sub
+
+End Module
