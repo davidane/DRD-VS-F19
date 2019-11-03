@@ -1,20 +1,34 @@
+'Dane Davids
+'RCET0265
+'SimpleCalculator
+'Selects whether to add or multiply two numbers
+
 Option Explicit On
 Option Strict On
 
-Public Class SimpleCalculator
+Module Program
 
-  Public Sub Numbers()
-    Dim firstNumber As Integer = Cint(userInputOne)
-    Dim secondNumber As Integer = Cint(userInputTwo)
-    Dim userInputOne as String
-    Dim userInputTwo
+  Sub Main()
+    Console.WriteLine("Would you like to add or multiply? (Insert + or *)")
+    Dim mathInput as String = Console.ReadLine().ToString()
+
+    Console.WriteLine("Which two numbers would you like to use? (Enter the first number, then press enter to next line; where you will enter the second number)")
+    Dim numberOne as Integer = CInt(Console.ReadLine())
+    Dim numberTwo as Integer = CInt(Console.ReadLine())
+
+    Dim sum As String
+
+    If mathInput = "+" Then
+            sum = Cstr(numberOne + numberTwo)
+    ElseIf mathInput = "*" Then
+            sum = Cstr(numberOne * numberTwo)
+    ElseIf mathInput <> "+" OrElse mathInput <> "*" Then
+            sum = "Please enter + or *..."
+    Else Console.WriteLine("Please enter + or *...")
+
+    End If
+
+      Console.WriteLine(sum)
   End Sub
 
-
-  Public Sub Add()
-
-    
-
-  End Sub
-
-End Class
+End Module
