@@ -1,7 +1,8 @@
 'Dane Davids
 'RCET0265
-'SimpleCalculator
-'Selects whether to add or multiply two numbers
+'Times table
+'Displays a mulitplication table for numbers 1-12
+
 
 Option Explicit On
 Option Strict On
