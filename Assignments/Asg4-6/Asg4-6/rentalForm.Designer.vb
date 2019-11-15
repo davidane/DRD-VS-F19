@@ -278,6 +278,7 @@ Partial Class rentalForm
         '
         'exitButton
         '
+        Me.exitButton.DialogResult = System.Windows.Forms.DialogResult.Cancel
         Me.exitButton.Location = New System.Drawing.Point(408, 380)
         Me.exitButton.Name = "exitButton"
         Me.exitButton.Size = New System.Drawing.Size(75, 23)
@@ -413,8 +414,10 @@ Partial Class rentalForm
         '
         'rentalForm
         '
+        Me.AcceptButton = Me.calculateButton
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.CancelButton = Me.exitButton
         Me.ClientSize = New System.Drawing.Size(643, 437)
         Me.Controls.Add(Me.summaryButton)
         Me.Controls.Add(Me.Label19)
