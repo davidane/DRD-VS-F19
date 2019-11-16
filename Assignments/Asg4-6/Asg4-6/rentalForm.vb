@@ -73,7 +73,7 @@ Public Class rentalForm
             zipCodeTextBox.Clear()
         End Try
     End Sub
-    Private Sub CheckBeginOdometer(ByRef errorMessage As String, ByVal beginOdometer As Double)
+    Private Sub CheckBeginOdometer(ByRef errorMessage As String, ByRef beginOdometer As Double)
         Try
             beginOdometer = CDbl(beginOdometerTextBox.Text)
         Catch ex As Exception
@@ -82,7 +82,7 @@ Public Class rentalForm
             beginOdometerTextBox.Clear()
         End Try
     End Sub
-    Private Sub CheckEndOdometer(ByRef errorMessage As String, ByVal endOdometer As Double)
+    Private Sub CheckEndOdometer(ByRef errorMessage As String, ByRef endOdometer As Double)
         Try
             endOdometer = CDbl(endOdometerTextBox.Text)
         Catch ex As Exception
@@ -99,17 +99,48 @@ Public Class rentalForm
             daysTextBox.Select()
             daysTextBox.Clear()
         End Try
+        If days < 1 Or days > 45 Then
+            errorMessage += "Number of days must be greater than 0 and less than 45." & vbNewLine
+            daysTextBox.Select()
+            daysTextBox.Clear()
+        End If
+    End Sub
+    Private Sub displayLabelTextBoxes(ByRef distanceDriven As Double, ByRef mileageCharge As Double, ByRef chargedMiles As Double)
+        Dim caseMileage As Integer
+        If milesRadioButton.Checked = True Then
+            distanceDriven = distanceDriven
+        Else
+            distanceDriven = 0.62 * distanceDriven
+        End If
+        milesDrivenLabel.Text = CStr(distanceDriven)
+        'caseMileage = CInt(distanceDriven)
+        'Select Case distanceDriven
+        '    Case
+        'End Select
+        If distanceDriven < 201 Then
+            mileageCharge = 0
+        ElseIf distanceDriven > 200 And distanceDriven < 501 Then
+            chargedMiles = (0.12 * (distanceDriven - 200))
+
+        End If
+        mileChargeLabel.Text = CStr(FormatCurrency(mileageCharge))
     End Sub
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles calculateButton.Click
         Dim errorMessage As String = ""
-        Dim customerName As String
-        Dim address As String
-        Dim city As String
-        Dim state As String
-        Dim zipCode As Integer
-        Dim beginOdometer As Double
-        Dim endOdometer As Double
-        Dim days As Integer
+        Dim customerName As String 'no limits put on this other than something must be entered into the textbox
+        Dim address As String 'no limits put on this other than something must be entered into the textbox
+        Dim city As String 'city name, no limits put on this other than something must be entered into the textbox
+        Dim state As String 'state name, would be interesting to add a dropdown list box of all 50 states. No limits put on this other than something must be entered into the textbox
+        Dim zipCode As Integer 'zipcode, no max or min length is set
+        Dim beginOdometer As Double 'begin odometer reading
+        Dim endOdometer As Double 'end odometer reading
+        Dim days As Integer 'number of days driven, must be a whole number from 1 to 45
+        Dim distanceDriven As Double 'distance driven; value will be changed to miles when calculate, but not changed in textbox
+        Dim mileageCharge As Double 'cost of total distance driven
+        Dim chargedMiles As Double 'amount of miles being charged for
+        Dim dayCharge As Integer
+        Dim discount As Double
+        Dim amountOwed As Double
         CheckDays(errorMessage, days)
         CheckEndOdometer(errorMessage, endOdometer)
         CheckBeginOdometer(errorMessage, beginOdometer)
@@ -121,7 +152,13 @@ Public Class rentalForm
         If errorMessage <> "" Then
             MessageBox.Show(errorMessage, "Error")
         Else
-
+            distanceDriven = (endOdometer - beginOdometer)
+            displayLabelTextBoxes(distanceDriven, mileageCharge)
+            'Select Case number
+            'Case 1
+            'Case 2
+            'Case Else
+            'End Select
         End If
     End Sub
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
@@ -145,6 +182,10 @@ Public Class rentalForm
     End Sub
 
     Private Sub SummaryButton_Click(sender As Object, e As EventArgs) Handles summaryButton.Click
+        MessageBox.Show(milesRadioButton.Checked.ToString)
+    End Sub
+
+    Private Sub rentalForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

@@ -142,13 +142,15 @@ Partial Class rentalForm
         Me.nameTextBox.Name = "nameTextBox"
         Me.nameTextBox.Size = New System.Drawing.Size(100, 20)
         Me.nameTextBox.TabIndex = 1
+        Me.nameTextBox.Text = "Dane Davids"
         '
         'addressTextBox
         '
-        Me.addressTextBox.Location = New System.Drawing.Point(160, 44)
+        Me.addressTextBox.Location = New System.Drawing.Point(105, 44)
         Me.addressTextBox.Name = "addressTextBox"
-        Me.addressTextBox.Size = New System.Drawing.Size(100, 20)
+        Me.addressTextBox.Size = New System.Drawing.Size(155, 20)
         Me.addressTextBox.TabIndex = 3
+        Me.addressTextBox.Text = "12195 S Dempsey Creek Road"
         '
         'cityTextBox
         '
@@ -156,6 +158,7 @@ Partial Class rentalForm
         Me.cityTextBox.Name = "cityTextBox"
         Me.cityTextBox.Size = New System.Drawing.Size(100, 20)
         Me.cityTextBox.TabIndex = 5
+        Me.cityTextBox.Text = "Lava Hot Springs"
         '
         'stateTextBox
         '
@@ -163,6 +166,7 @@ Partial Class rentalForm
         Me.stateTextBox.Name = "stateTextBox"
         Me.stateTextBox.Size = New System.Drawing.Size(100, 20)
         Me.stateTextBox.TabIndex = 7
+        Me.stateTextBox.Text = "Idaho"
         '
         'zipCodeTextBox
         '
@@ -170,6 +174,7 @@ Partial Class rentalForm
         Me.zipCodeTextBox.Name = "zipCodeTextBox"
         Me.zipCodeTextBox.Size = New System.Drawing.Size(100, 20)
         Me.zipCodeTextBox.TabIndex = 9
+        Me.zipCodeTextBox.Text = "83246"
         '
         'beginOdometerTextBox
         '
@@ -177,6 +182,7 @@ Partial Class rentalForm
         Me.beginOdometerTextBox.Name = "beginOdometerTextBox"
         Me.beginOdometerTextBox.Size = New System.Drawing.Size(100, 20)
         Me.beginOdometerTextBox.TabIndex = 11
+        Me.beginOdometerTextBox.Text = "123"
         '
         'endOdometerTextBox
         '
@@ -184,6 +190,7 @@ Partial Class rentalForm
         Me.endOdometerTextBox.Name = "endOdometerTextBox"
         Me.endOdometerTextBox.Size = New System.Drawing.Size(100, 20)
         Me.endOdometerTextBox.TabIndex = 13
+        Me.endOdometerTextBox.Text = "456"
         '
         'daysTextBox
         '
@@ -299,7 +306,7 @@ Partial Class rentalForm
         '
         'milesDrivenLabel
         '
-        Me.milesDrivenLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.milesDrivenLabel.BackColor = System.Drawing.SystemColors.Window
         Me.milesDrivenLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.milesDrivenLabel.Location = New System.Drawing.Point(504, 16)
         Me.milesDrivenLabel.Name = "milesDrivenLabel"
