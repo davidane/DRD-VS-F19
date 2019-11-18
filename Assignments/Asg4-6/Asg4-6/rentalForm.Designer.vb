@@ -198,6 +198,7 @@ Partial Class rentalForm
         Me.daysTextBox.Name = "daysTextBox"
         Me.daysTextBox.Size = New System.Drawing.Size(100, 20)
         Me.daysTextBox.TabIndex = 15
+        Me.daysTextBox.Text = "4"
         '
         'OdometerGroupBox
         '
@@ -326,7 +327,7 @@ Partial Class rentalForm
         '
         'mileChargeLabel
         '
-        Me.mileChargeLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.mileChargeLabel.BackColor = System.Drawing.SystemColors.Window
         Me.mileChargeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.mileChargeLabel.Location = New System.Drawing.Point(504, 48)
         Me.mileChargeLabel.Name = "mileChargeLabel"
@@ -366,7 +367,7 @@ Partial Class rentalForm
         '
         'dayChargeLabel
         '
-        Me.dayChargeLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.dayChargeLabel.BackColor = System.Drawing.SystemColors.Window
         Me.dayChargeLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.dayChargeLabel.Location = New System.Drawing.Point(504, 80)
         Me.dayChargeLabel.Name = "dayChargeLabel"
@@ -376,7 +377,7 @@ Partial Class rentalForm
         '
         'discountLabel
         '
-        Me.discountLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.discountLabel.BackColor = System.Drawing.SystemColors.Window
         Me.discountLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.discountLabel.Location = New System.Drawing.Point(504, 112)
         Me.discountLabel.Name = "discountLabel"

@@ -91,7 +91,7 @@ Public Class rentalForm
             endOdometerTextBox.Clear()
         End Try
     End Sub
-    Private Sub CheckDays(ByRef errorMessage As String, ByVal days As Integer)
+    Private Sub CheckDays(ByRef errorMessage As String, ByRef days As Integer)
         Try
             days = CInt(daysTextBox.Text)
         Catch ex As Exception
@@ -105,25 +105,50 @@ Public Class rentalForm
             daysTextBox.Clear()
         End If
     End Sub
-    Private Sub displayLabelTextBoxes(ByRef distanceDriven As Double, ByRef mileageCharge As Double, ByRef chargedMiles As Double)
-        Dim caseMileage As Integer
+    Private Sub displayLabelTextBoxes(ByVal distanceDriven As Double, ByRef mileageCharge As Double)
+        Dim tenCentsMiles As Double
+        Dim twelveCentsMiles As Double
+        Dim freeMiles As Double = 200
+        'Dim milesForMathSimplification As Double
+        'Dim caseMileage As Integer
+        'caseMileage = CInt(distanceDriven)
+        'Select Case distanceDriven
+        '    Case
+        'End Select
+
         If milesRadioButton.Checked = True Then
             distanceDriven = distanceDriven
         Else
             distanceDriven = 0.62 * distanceDriven
         End If
         milesDrivenLabel.Text = CStr(distanceDriven)
-        'caseMileage = CInt(distanceDriven)
-        'Select Case distanceDriven
-        '    Case
-        'End Select
         If distanceDriven < 201 Then
             mileageCharge = 0
         ElseIf distanceDriven > 200 And distanceDriven < 501 Then
-            chargedMiles = (0.12 * (distanceDriven - 200))
-
+            twelveCentsMiles = (distanceDriven - freeMiles)
+            mileageCharge = (0.12 * twelveCentsMiles)
+        ElseIf distanceDriven > 500 Then
+            twelveCentsMiles = 300
+            tenCentsMiles = distanceDriven - twelveCentsMiles - freeMiles
+            mileageCharge = ((0.1 * tenCentsMiles) + (0.12 * twelveCentsMiles))
         End If
         mileChargeLabel.Text = CStr(FormatCurrency(mileageCharge))
+    End Sub
+    Private Sub dayChargeDisplay(ByVal days As Integer, ByRef dayCharge As Double)
+        dayCharge = 15 * days
+        dayChargeLabel.Text = CStr(FormatCurrency(dayCharge))
+    End Sub
+    Private Sub discount(ByVal totalCost As Double, ByRef discountAmount As Double)
+        If aaaCheckBox.Checked = True And seniorCheckBox.Checked = True Then
+            discountAmount = 0.08 * totalCost
+        ElseIf seniorCheckBox.Checked = True Then
+            discountAmount = 0.03 * totalCost
+        ElseIf aaaCheckBox.Checked = True Then
+            discountAmount = 0.05 * totalCost
+        Else
+            discountAmount = 0
+        End If
+        discountLabel.Text = CStr(FormatCurrency(discountAmount))
     End Sub
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles calculateButton.Click
         Dim errorMessage As String = ""
@@ -137,9 +162,10 @@ Public Class rentalForm
         Dim days As Integer 'number of days driven, must be a whole number from 1 to 45
         Dim distanceDriven As Double 'distance driven; value will be changed to miles when calculate, but not changed in textbox
         Dim mileageCharge As Double 'cost of total distance driven
-        Dim chargedMiles As Double 'amount of miles being charged for
-        Dim dayCharge As Integer
-        Dim discount As Double
+        'Dim chargedMiles As Double 'amount of miles being charged for
+        Dim dayCharge As Double 'amount charged per day of having the vehicle
+        Dim totalCost As Double 'cost of renting the vehicle before discount/s applied
+        Dim discountAmount As Double
         Dim amountOwed As Double
         CheckDays(errorMessage, days)
         CheckEndOdometer(errorMessage, endOdometer)
@@ -154,11 +180,9 @@ Public Class rentalForm
         Else
             distanceDriven = (endOdometer - beginOdometer)
             displayLabelTextBoxes(distanceDriven, mileageCharge)
-            'Select Case number
-            'Case 1
-            'Case 2
-            'Case Else
-            'End Select
+            dayChargeDisplay(days, dayCharge)
+            totalCost = mileageCharge + dayCharge
+            discount(totalCost, discountAmount)
         End If
     End Sub
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
