@@ -387,7 +387,7 @@ Partial Class rentalForm
         '
         'youOweLabel
         '
-        Me.youOweLabel.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.youOweLabel.BackColor = System.Drawing.SystemColors.Window
         Me.youOweLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.youOweLabel.Location = New System.Drawing.Point(504, 144)
         Me.youOweLabel.Name = "youOweLabel"

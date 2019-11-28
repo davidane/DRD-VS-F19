@@ -8,7 +8,7 @@ Option Explicit On
 Option Compare Binary
 
 Public Class rentalForm
-    Private Sub CheckName(ByRef errorMessage As String, ByVal customerName As String)
+    Private Sub CheckName(ByRef errorMessage As String, ByRef customerName As String)
         Try
             customerName = CStr(nameTextBox.Text)
         Catch ex As Exception
@@ -22,7 +22,7 @@ Public Class rentalForm
             nameTextBox.Clear()
         End If
     End Sub
-    Private Sub CheckAddress(ByRef errorMessage As String, ByVal address As String)
+    Private Sub CheckAddress(ByRef errorMessage As String, ByRef address As String)
         Try
             address = CStr(addressTextBox.Text)
         Catch ex As Exception
@@ -36,7 +36,7 @@ Public Class rentalForm
             addressTextBox.Clear()
         End If
     End Sub
-    Private Sub CheckCity(ByRef errorMessage As String, ByVal city As String)
+    Private Sub CheckCity(ByRef errorMessage As String, ByRef city As String)
         Try
             city = CStr(cityTextBox.Text)
         Catch ex As Exception
@@ -50,7 +50,7 @@ Public Class rentalForm
             cityTextBox.Clear()
         End If
     End Sub
-    Private Sub CheckState(ByRef errorMessage As String, ByVal state As String)
+    Private Sub CheckState(ByRef errorMessage As String, ByRef state As String)
         Try
             state = CStr(stateTextBox.Text)
         Catch ex As Exception
@@ -64,7 +64,7 @@ Public Class rentalForm
             stateTextBox.Clear()
         End If
     End Sub
-    Private Sub CheckZipCode(ByRef errorMessage As String, ByVal zipCode As Integer)
+    Private Sub CheckZipCode(ByRef errorMessage As String, ByRef zipCode As Integer)
         Try
             zipCode = CInt(zipCodeTextBox.Text)
         Catch ex As Exception
@@ -105,7 +105,7 @@ Public Class rentalForm
             daysTextBox.Clear()
         End If
     End Sub
-    Private Sub displayLabelTextBoxes(ByVal distanceDriven As Double, ByRef mileageCharge As Double)
+    Private Sub DisplayLabelTextBoxes(ByVal distanceDriven As Double, ByRef mileageCharge As Double)
         Dim tenCentsMiles As Double
         Dim twelveCentsMiles As Double
         Dim freeMiles As Double = 200
@@ -134,11 +134,11 @@ Public Class rentalForm
         End If
         mileChargeLabel.Text = CStr(FormatCurrency(mileageCharge))
     End Sub
-    Private Sub dayChargeDisplay(ByVal days As Integer, ByRef dayCharge As Double)
+    Private Sub DayChargeDisplay(ByVal days As Integer, ByRef dayCharge As Double)
         dayCharge = 15 * days
         dayChargeLabel.Text = CStr(FormatCurrency(dayCharge))
     End Sub
-    Private Sub discount(ByVal totalCost As Double, ByRef discountAmount As Double)
+    Private Sub Discount(ByVal totalCost As Double, ByRef discountAmount As Double)
         If aaaCheckBox.Checked = True And seniorCheckBox.Checked = True Then
             discountAmount = 0.08 * totalCost
         ElseIf seniorCheckBox.Checked = True Then
@@ -149,6 +149,20 @@ Public Class rentalForm
             discountAmount = 0
         End If
         discountLabel.Text = CStr(FormatCurrency(discountAmount))
+    End Sub
+    Private Sub YouOwe(ByVal discountAmount As Double, ByRef amountOwed As Double, ByVal totalCost As Double)
+        amountOwed = totalCost - discountAmount
+        youOweLabel.Text = CStr(FormatCurrency(amountOwed))
+    End Sub
+    Private Sub Summarize(ByVal customerName As String, ByVal address As String, ByVal city As String, ByVal state As String, ByVal zipCode As Integer, ByVal beginOdometer As Double, ByVal endOdometer As Double, ByVal days As Integer, ByVal distanceDriven As Double,)
+        Dim upperBound As Integer
+        Dim lowerBound As Integer
+        Dim receipt(lowerBound, upperBound) As String
+        For 0 To numberOfCustomers
+
+
+
+            MessageBox.Show(receipt)
     End Sub
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles calculateButton.Click
         Dim errorMessage As String = ""
@@ -167,6 +181,7 @@ Public Class rentalForm
         Dim totalCost As Double 'cost of renting the vehicle before discount/s applied
         Dim discountAmount As Double
         Dim amountOwed As Double
+        Dim numberOfCustomers As Integer
         CheckDays(errorMessage, days)
         CheckEndOdometer(errorMessage, endOdometer)
         CheckBeginOdometer(errorMessage, beginOdometer)
@@ -179,10 +194,12 @@ Public Class rentalForm
             MessageBox.Show(errorMessage, "Error")
         Else
             distanceDriven = (endOdometer - beginOdometer)
-            displayLabelTextBoxes(distanceDriven, mileageCharge)
-            dayChargeDisplay(days, dayCharge)
+            DisplayLabelTextBoxes(distanceDriven, mileageCharge)
+            DayChargeDisplay(days, dayCharge)
             totalCost = mileageCharge + dayCharge
-            discount(totalCost, discountAmount)
+            Discount(totalCost, discountAmount)
+            YouOwe(discountAmount, amountOwed, totalCost)
+            numberOfCustomers += 1
         End If
     End Sub
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
@@ -206,7 +223,7 @@ Public Class rentalForm
     End Sub
 
     Private Sub SummaryButton_Click(sender As Object, e As EventArgs) Handles summaryButton.Click
-        MessageBox.Show(milesRadioButton.Checked.ToString)
+        Summarize()
     End Sub
 
     Private Sub rentalForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
