@@ -8,6 +8,18 @@ Option Explicit On
 Option Compare Binary
 
 Public Class rentalForm
+    Private Function 
+
+    Return
+
+    End Function
+
+    Private Sub CustomerInformationSub(ByVal currentCustomerInfo As String, ByRef compilationOfCustomerInformation As String)
+
+        'Dim compilationOfCustomerInformation As String
+        compilationOfCustomerInformation += currentCustomerInfo
+
+    End Sub
     Private Sub CheckName(ByRef errorMessage As String, ByRef customerName As String)
         Try
             customerName = CStr(nameTextBox.Text)
@@ -154,15 +166,16 @@ Public Class rentalForm
         amountOwed = totalCost - discountAmount
         youOweLabel.Text = CStr(FormatCurrency(amountOwed))
     End Sub
-    Private Sub Summarize(ByVal customerName As String, ByVal address As String, ByVal city As String, ByVal state As String, ByVal zipCode As Integer, ByVal beginOdometer As Double, ByVal endOdometer As Double, ByVal days As Integer, ByVal distanceDriven As Double,)
-        Dim upperBound As Integer
-        Dim lowerBound As Integer
-        Dim receipt(lowerBound, upperBound) As String
-        For 0 To numberOfCustomers
+    Private Sub Summarize(compilationOfCustomerInformation As String)
 
+        Static currentCustomerInfo As String
+        CustomerInformationSub(compilationOfCustomerInformation, currentCustomerInfo)
+        'For Each item As String In customerInfoList
+        'Console.Write(item)
+        'Next
 
+        Console.WriteLine(compilationOfCustomerInformation)
 
-            MessageBox.Show(receipt)
     End Sub
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles calculateButton.Click
         Dim errorMessage As String = ""
@@ -176,12 +189,14 @@ Public Class rentalForm
         Dim days As Integer 'number of days driven, must be a whole number from 1 to 45
         Dim distanceDriven As Double 'distance driven; value will be changed to miles when calculate, but not changed in textbox
         Dim mileageCharge As Double 'cost of total distance driven
-        'Dim chargedMiles As Double 'amount of miles being charged for
         Dim dayCharge As Double 'amount charged per day of having the vehicle
         Dim totalCost As Double 'cost of renting the vehicle before discount/s applied
         Dim discountAmount As Double
         Dim amountOwed As Double
-        Dim numberOfCustomers As Integer
+        Dim currentCustomerInfo As String = ""
+        Static numberOfCustomers As Integer
+        Static compilationOfCustomerInformation As String
+        numberOfCustomers += 1
         CheckDays(errorMessage, days)
         CheckEndOdometer(errorMessage, endOdometer)
         CheckBeginOdometer(errorMessage, beginOdometer)
@@ -199,13 +214,11 @@ Public Class rentalForm
             totalCost = mileageCharge + dayCharge
             Discount(totalCost, discountAmount)
             YouOwe(discountAmount, amountOwed, totalCost)
-            numberOfCustomers += 1
+            currentCustomerInfo = ("$$" & "Customer #:" & numberOfCustomers & "; Name: " & customerName & "; Address: " & address & "; City: " & city & "; State: " & state & "; Zipcode: " & zipCode & "; Beginning Odometer: " & beginOdometer & "; Ending Odometer: " & endOdometer & "; Days With Car: " & days & "; Distance Driven(miles): " & distanceDriven & "; Mileage Charge: " & mileageCharge & "; Daily Charge: " & dayCharge & "; Discount Rate: " & discountAmount & "; Amount Owed: " & amountOwed & ";")
+
+            CustomerInformationSub(currentCustomerInfo, compilationOfCustomerInformation)
         End If
     End Sub
-    Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
-        Me.Close()
-    End Sub
-
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles clearButton.Click
         nameTextBox.Clear()
         addressTextBox.Clear()
@@ -221,11 +234,14 @@ Public Class rentalForm
         discountLabel.Text = ""
         youOweLabel.Text = ""
     End Sub
-
-    Private Sub SummaryButton_Click(sender As Object, e As EventArgs) Handles summaryButton.Click
-        Summarize()
+    Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
+        Me.Close()
     End Sub
-
+    Private Sub SummaryButton_Click(sender As Object, e As EventArgs) Handles summaryButton.Click
+        'Dim customerInfoList As List(Of String)
+        Dim compilationOfCustomerInformation As String
+        Summarize(compilationOfCustomerInformation)
+    End Sub
     Private Sub rentalForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
