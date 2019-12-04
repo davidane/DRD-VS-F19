@@ -73,11 +73,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sprint-1.vb">
+    <Compile Include="Sprint.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Sprint-1.Designer.vb">
-      <DependentUpon>Sprint-1.vb</DependentUpon>
+    <Compile Include="Sprint.Designer.vb">
+      <DependentUpon>Sprint.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -97,8 +97,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Sprint-1.resx">
-      <DependentUpon>Sprint-1.vb</DependentUpon>
+    <EmbeddedResource Include="Sprint.resx">
+      <DependentUpon>Sprint.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

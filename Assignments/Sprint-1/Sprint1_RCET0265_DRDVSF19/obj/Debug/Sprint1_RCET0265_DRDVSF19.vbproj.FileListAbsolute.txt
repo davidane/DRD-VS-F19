@@ -8,4 +8,4 @@ C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Sprint-1\Sprint1_RCET0265
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Sprint-1\Sprint1_RCET0265_DRDVSF19\obj\Debug\Sprint1_RCET0265_DRDVSF19.exe
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Sprint-1\Sprint1_RCET0265_DRDVSF19\obj\Debug\Sprint1_RCET0265_DRDVSF19.xml
 C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Sprint-1\Sprint1_RCET0265_DRDVSF19\obj\Debug\Sprint1_RCET0265_DRDVSF19.pdb
-C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Sprint-1\Sprint1_RCET0265_DRDVSF19\obj\Debug\Sprint1_RCET0265_DRDVSF19.Sprint1Form.resources
+C:\Users\demps\Documents\GitHub\DRD-VS-F19\Assignments\Sprint-1\Sprint1_RCET0265_DRDVSF19\obj\Debug\Sprint1_RCET0265_DRDVSF19.SprintForm.resources
