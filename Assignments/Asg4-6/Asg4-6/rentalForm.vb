@@ -8,18 +8,22 @@ Option Explicit On
 Option Compare Binary
 
 Public Class rentalForm
-    Private Function 
+    'Private Function 
 
-    Return
+    'Return
 
-    End Function
+    'End Function
 
-    Private Sub CustomerInformationSub(ByVal currentCustomerInfo As String, ByRef compilationOfCustomerInformation As String)
-
-        'Dim compilationOfCustomerInformation As String
-        compilationOfCustomerInformation += currentCustomerInfo
+    Private Sub SummaryTotals()
 
     End Sub
+
+    'Private Sub CustomerInformationSub(ByVal currentCustomerInfo As String, ByRef compilationOfCustomerInformation As String)
+
+    'Dim compilationOfCustomerInformation As String
+    '   compilationOfCustomerInformation += currentCustomerInfo
+
+    'End Sub
     Private Sub CheckName(ByRef errorMessage As String, ByRef customerName As String)
         Try
             customerName = CStr(nameTextBox.Text)
@@ -169,12 +173,12 @@ Public Class rentalForm
     Private Sub Summarize(compilationOfCustomerInformation As String)
 
         Static currentCustomerInfo As String
-        CustomerInformationSub(compilationOfCustomerInformation, currentCustomerInfo)
+        'CustomerInformationSub(compilationOfCustomerInformation, currentCustomerInfo)
         'For Each item As String In customerInfoList
         'Console.Write(item)
         'Next
 
-        Console.WriteLine(compilationOfCustomerInformation)
+        'Console.WriteLine(compilationOfCustomerInformation)
 
     End Sub
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles calculateButton.Click
@@ -194,9 +198,11 @@ Public Class rentalForm
         Dim discountAmount As Double
         Dim amountOwed As Double
         Dim currentCustomerInfo As String = ""
-        Static numberOfCustomers As Integer
-        Static compilationOfCustomerInformation As String
-        numberOfCustomers += 1
+        'Static numberOfCustomers As Integer
+        'Static compilationOfCustomerInformation As String
+        Dim distanceDrivenMiles As Double
+        Dim totalChargesSummary As Double
+        'Dim numberOfCustomers As Integer
         CheckDays(errorMessage, days)
         CheckEndOdometer(errorMessage, endOdometer)
         CheckBeginOdometer(errorMessage, beginOdometer)
@@ -208,15 +214,16 @@ Public Class rentalForm
         If errorMessage <> "" Then
             MessageBox.Show(errorMessage, "Error")
         Else
+            'numberOfCustomers += 1
             distanceDriven = (endOdometer - beginOdometer)
             DisplayLabelTextBoxes(distanceDriven, mileageCharge)
             DayChargeDisplay(days, dayCharge)
             totalCost = mileageCharge + dayCharge
             Discount(totalCost, discountAmount)
             YouOwe(discountAmount, amountOwed, totalCost)
-            currentCustomerInfo = ("$$" & "Customer #:" & numberOfCustomers & "; Name: " & customerName & "; Address: " & address & "; City: " & city & "; State: " & state & "; Zipcode: " & zipCode & "; Beginning Odometer: " & beginOdometer & "; Ending Odometer: " & endOdometer & "; Days With Car: " & days & "; Distance Driven(miles): " & distanceDriven & "; Mileage Charge: " & mileageCharge & "; Daily Charge: " & dayCharge & "; Discount Rate: " & discountAmount & "; Amount Owed: " & amountOwed & ";")
+            'currentCustomerInfo = ("$$" & "Customer #:" & numberOfCustomers & "; Name: " & customerName & "; Address: " & address & "; City: " & city & "; State: " & state & "; Zipcode: " & zipCode & "; Beginning Odometer: " & beginOdometer & "; Ending Odometer: " & endOdometer & "; Days With Car: " & days & "; Distance Driven(miles): " & distanceDriven & "; Mileage Charge: " & mileageCharge & "; Daily Charge: " & dayCharge & "; Discount Rate: " & discountAmount & "; Amount Owed: " & amountOwed & ";")
 
-            CustomerInformationSub(currentCustomerInfo, compilationOfCustomerInformation)
+            'CustomerInformationSub(currentCustomerInfo, compilationOfCustomerInformation)
         End If
     End Sub
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles clearButton.Click
