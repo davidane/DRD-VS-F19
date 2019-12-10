@@ -8,22 +8,22 @@ Option Explicit On
 Option Compare Binary
 
 Public Class rentalForm
-    'Private Function 
-
-    'Return
-
-    'End Function
-
-    Private Sub SummaryTotals()
-
+    Private Sub SummaryTotals(ByVal distanceDriven As Double, ByVal totalCost As Double, ByVal summaryButtonCheck As Boolean)
+        Static totalMiles As Double
+        Static totalCharges As Double
+        Static numberOfCustomers As Integer
+        If summaryButtonCheck = True Then
+            MessageBox.Show("Total Miles Charged For Today: " & totalMiles & vbNewLine & "Total Charges Today: " & FormatCurrency(totalCharges) & vbNewLine & "Total Customers Today: " & numberOfCustomers)
+            totalMiles = 0
+            totalCharges = 0
+            summaryButtonCheck = False
+        Else
+            totalMiles += distanceDriven
+            totalCharges += totalCost
+            numberOfCustomers += 1
+        End If
     End Sub
 
-    'Private Sub CustomerInformationSub(ByVal currentCustomerInfo As String, ByRef compilationOfCustomerInformation As String)
-
-    'Dim compilationOfCustomerInformation As String
-    '   compilationOfCustomerInformation += currentCustomerInfo
-
-    'End Sub
     Private Sub CheckName(ByRef errorMessage As String, ByRef customerName As String)
         Try
             customerName = CStr(nameTextBox.Text)
@@ -170,16 +170,20 @@ Public Class rentalForm
         amountOwed = totalCost - discountAmount
         youOweLabel.Text = CStr(FormatCurrency(amountOwed))
     End Sub
-    Private Sub Summarize(compilationOfCustomerInformation As String)
-
-        Static currentCustomerInfo As String
-        'CustomerInformationSub(compilationOfCustomerInformation, currentCustomerInfo)
-        'For Each item As String In customerInfoList
-        'Console.Write(item)
-        'Next
-
-        'Console.WriteLine(compilationOfCustomerInformation)
-
+    Private Sub clearLabelsAndTextBoxes()
+        nameTextBox.Clear()
+        addressTextBox.Clear()
+        cityTextBox.Clear()
+        stateTextBox.Clear()
+        zipCodeTextBox.Clear()
+        beginOdometerTextBox.Clear()
+        endOdometerTextBox.Clear()
+        daysTextBox.Clear()
+        milesDrivenLabel.Text = ""
+        mileChargeLabel.Text = ""
+        dayChargeLabel.Text = ""
+        discountLabel.Text = ""
+        youOweLabel.Text = ""
     End Sub
     Private Sub CalculateButton_Click(sender As Object, e As EventArgs) Handles calculateButton.Click
         Dim errorMessage As String = ""
@@ -198,10 +202,9 @@ Public Class rentalForm
         Dim discountAmount As Double
         Dim amountOwed As Double
         Dim currentCustomerInfo As String = ""
-        'Static numberOfCustomers As Integer
-        'Static compilationOfCustomerInformation As String
-        Dim distanceDrivenMiles As Double
-        Dim totalChargesSummary As Double
+        Static summaryButtonCheck As Boolean = False
+        'Dim distanceDrivenMilesTotal As Double
+        'Dim totalChargesSummary As Double
         'Dim numberOfCustomers As Integer
         CheckDays(errorMessage, days)
         CheckEndOdometer(errorMessage, endOdometer)
@@ -221,35 +224,20 @@ Public Class rentalForm
             totalCost = mileageCharge + dayCharge
             Discount(totalCost, discountAmount)
             YouOwe(discountAmount, amountOwed, totalCost)
-            'currentCustomerInfo = ("$$" & "Customer #:" & numberOfCustomers & "; Name: " & customerName & "; Address: " & address & "; City: " & city & "; State: " & state & "; Zipcode: " & zipCode & "; Beginning Odometer: " & beginOdometer & "; Ending Odometer: " & endOdometer & "; Days With Car: " & days & "; Distance Driven(miles): " & distanceDriven & "; Mileage Charge: " & mileageCharge & "; Daily Charge: " & dayCharge & "; Discount Rate: " & discountAmount & "; Amount Owed: " & amountOwed & ";")
-
-            'CustomerInformationSub(currentCustomerInfo, compilationOfCustomerInformation)
+            SummaryTotals(distanceDriven, totalCost, summaryButtonCheck)
         End If
     End Sub
     Private Sub ClearButton_Click(sender As Object, e As EventArgs) Handles clearButton.Click
-        nameTextBox.Clear()
-        addressTextBox.Clear()
-        cityTextBox.Clear()
-        stateTextBox.Clear()
-        zipCodeTextBox.Clear()
-        beginOdometerTextBox.Clear()
-        endOdometerTextBox.Clear()
-        daysTextBox.Clear()
-        milesDrivenLabel.Text = ""
-        mileChargeLabel.Text = ""
-        dayChargeLabel.Text = ""
-        discountLabel.Text = ""
-        youOweLabel.Text = ""
+        clearLabelsAndTextBoxes()
     End Sub
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
         Me.Close()
     End Sub
     Private Sub SummaryButton_Click(sender As Object, e As EventArgs) Handles summaryButton.Click
-        'Dim customerInfoList As List(Of String)
-        Dim compilationOfCustomerInformation As String
-        Summarize(compilationOfCustomerInformation)
-    End Sub
-    Private Sub rentalForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Static distanceDriven As Double
+        Static totalCost As Double
+        Static summaryButtonCheck As Boolean
+        summaryButtonCheck = True
+        SummaryTotals(distanceDriven, totalCost, summaryButtonCheck)
     End Sub
 End Class
