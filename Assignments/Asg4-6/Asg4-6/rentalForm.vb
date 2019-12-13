@@ -214,6 +214,12 @@ Public Class rentalForm
         CheckCity(errorMessage, city)
         CheckAddress(errorMessage, address)
         CheckName(errorMessage, customerName)
+        If beginOdometer > endOdometer Then
+            errorMessage = "Beginning odometer reading must be larger than ending odometer reading."
+            beginOdometerTextBox.Clear()
+            endOdometerTextBox.Clear()
+            beginOdometerTextBox.Select()
+        End If
         If errorMessage <> "" Then
             MessageBox.Show(errorMessage, "Error")
         Else
@@ -231,7 +237,29 @@ Public Class rentalForm
         clearLabelsAndTextBoxes()
     End Sub
     Private Sub ExitButton_Click(sender As Object, e As EventArgs) Handles exitButton.Click
-        Me.Close()
+        ''Dim forSureExit As String = MessageBox.Show("Are you sure you want to exit?", "Exit", MessageBoxButtons.YesNo)
+        'Dim message, title, response As String
+        'Dim style As Integer
+        'message = "Are you sure you want to exit?"
+        'style = vbYesNo + vbCritical + vbDefaultButton2
+        'title = "Exit"
+        'response = MessageBox(message, style, title)
+        'Dim Msg, Style, Title, Help, Ctxt, Response, MyString
+        'Msg = "Do you want to continue ?"    ' Define message.
+        'Style = vbYesNo + vbCritical + vbDefaultButton2    ' Define buttons.
+        'Title = "MsgBox Demonstration"    ' Define title.
+        'Help = "DEMO.HLP"    ' Define Help file.
+        'Ctxt = 1000    ' Define topic context. 
+        '' Display message.
+        'Response = MsgBox(Msg, Style, Title, Help, Ctxt)
+        'If Response = vbYes Then    ' User chose Yes.
+        '    MyString = "Yes"    ' Perform some action.
+        'Else    ' User chose No.
+        '    MyString = "No"    ' Perform some action.
+        'End If
+        MessageBox.Show("Are you sure you want to exit?", "Exit?", MessageBoxButtons.YesNo)
+        If MessageBox.Equals = "Yes" Then
+
     End Sub
     Private Sub SummaryButton_Click(sender As Object, e As EventArgs) Handles summaryButton.Click
         Static distanceDriven As Double
